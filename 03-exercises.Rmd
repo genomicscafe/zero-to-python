@@ -8,7 +8,40 @@
 
 ## Python
 
-### Hello world 
+### Learning objectives
+
+- Understand how to run Python scripts from the command line
+
+- Use a terminal to navigate directories and execute Python code
+
+### Hello world example
+
+1. Open the terminal.
+
+2. Navigate to the directory where you want to create your Python script.
+
+3. Create a new file named `hello.py` using a text editor of your choice (e.g., `nano`, `vim`, or `touch`).
+
+4. Open `hello.py` in the text editor and write the following code:
+
+   ```python
+   print("Hello, world!")
+   ```
+
+5. Save the file and exit the text editor.
+
+6. In the terminal, run the script by typing:
+
+   ```bash
+   python hello.py
+   ```
+
+7. You should see the output:
+
+   ```
+   Hello, world!
+   ```
+
 
 
 ## Command line arguments
