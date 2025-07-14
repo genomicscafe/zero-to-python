@@ -1,32 +1,34 @@
-# Unix
+# Exercises
 
-## Run a command
+## Unix
 
-## Wrap a command in a Bash
+### Run a command
 
-# Python
+### Wrap a command in a Bash
 
-## Hello world 
+## Python
+
+### Hello world 
 
 
-# Command line arguments
+## Command line arguments
 
-## import sys
+### import sys
 
-## sys.argv
+### sys.argv
 
-## lists
+### lists
 
-## types
+### types
 
-# Parsing file line by line
+## Parsing file line by line
 
-## File streams
+### File streams
 
-## for loops
+### for loops
 
-# head.py
+## head.py
 
-# grep.py
+## grep.py
 
-# cut.py
+## cut.py
