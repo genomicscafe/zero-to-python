@@ -2,9 +2,51 @@
 
 ## Unix
 
+:::{.notice}
+
+Following is based on the “SciServer Essentials 2.0” image described in Ch 2. Setup Compute
+
+:::
+
 ### Run a command
 
+- Start a terminal
+
+```{r, echo = FALSE}
+
+ottrpal::include_slide("https://docs.google.com/presentation/d/1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo/edit#slide=id.g36ef0094ecf_0_0")
+
+```
+
+Run the `ls -l` command to list files (the `-l` is a command line argument that instructs the `ls` program to modify its operation so that longer details are provided about each file)
+
+```{r, echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo/edit#slide=id.g36ef0094ecf_0_8")
+```
+
+
 ### Wrap a command in a Bash
+
+- Create Text File
+
+```{r, echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo/edit#slide=id.g36ef0094ecf_0_29")
+```
+
+- Write your first Bash script
+
+```{r, echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo/edit#slide=id.g36ef0094ecf_0_40")
+```
+
+
+- Run `00-hello.sh`
+
+```{r, echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo/edit#slide=id.g36ef0094ecf_0_45")
+```
+
+
 
 ## Python
 
