@@ -1,0 +1,32 @@
+# Unix
+
+## Run a command
+
+## Wrap a command in a Bash
+
+# Python
+
+## Hello world 
+
+
+# Command line arguments
+
+## import sys
+
+## sys.argv
+
+## lists
+
+## types
+
+# Parsing file line by line
+
+## File streams
+
+## for loops
+
+# head.py
+
+# grep.py
+
+# cut.py
