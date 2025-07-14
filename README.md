@@ -1,4 +1,4 @@
-# {Course Name}
+# {zero-to-python}
 
 This course was created from [this GitHub template](https://github.com/ottrproject/OTTR_Template).
 
@@ -8,7 +8,13 @@ If you would like to contribute to this course material, take a look at the [OTT
 
 ## About this course
 
-This course introduces {info on what this course introduces}
+This course introduces {info on what this course introduces}...
+
+Glamour shot
+
+Pre-requisites for this course include {info on pre-requisites}.
+
+Learning goals for this course include {info on learning goals}.
 
 ## Learning Objectives
 
