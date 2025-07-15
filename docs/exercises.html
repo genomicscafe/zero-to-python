@@ -272,11 +272,32 @@ div.csl-indent {
 <h1><span class="header-section-number">Chapter 3</span> Exercises<a href="exercises.html#exercises" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="unix" class="section level2 hasAnchor" number="3.1">
 <h2><span class="header-section-number">3.1</span> Unix<a href="exercises.html#unix" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="notice">
+<p>Following is based on the “SciServer Essentials 2.0” image described in Ch 2. Setup Compute</p>
+</div>
 <div id="run-a-command" class="section level3 hasAnchor" number="3.1.1">
 <h3><span class="header-section-number">3.1.1</span> Run a command<a href="exercises.html#run-a-command" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Start a terminal</li>
+</ul>
+<p><img src="03-exercises_files/figure-html/1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo_g36ef0094ecf_0_0.png" width="480" /></p>
+<p>Run the <code>ls -l</code> command to list files (the <code>-l</code> is a command line argument that instructs the <code>ls</code> program to modify its operation so that longer details are provided about each file)</p>
+<p><img src="03-exercises_files/figure-html/1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo_g36ef0094ecf_0_8.png" width="480" /></p>
 </div>
 <div id="wrap-a-command-in-a-bash" class="section level3 hasAnchor" number="3.1.2">
 <h3><span class="header-section-number">3.1.2</span> Wrap a command in a Bash<a href="exercises.html#wrap-a-command-in-a-bash" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Create Text File</li>
+</ul>
+<p><img src="03-exercises_files/figure-html/1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo_g36ef0094ecf_0_29.png" width="480" /></p>
+<ul>
+<li>Write your first Bash script</li>
+</ul>
+<p><img src="03-exercises_files/figure-html/1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo_g36ef0094ecf_0_40.png" width="480" /></p>
+<ul>
+<li>Run <code>00-hello.sh</code></li>
+</ul>
+<p><img src="03-exercises_files/figure-html/1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo_g36ef0094ecf_0_45.png" width="480" /></p>
 </div>
 </div>
 <div id="python" class="section level2 hasAnchor" number="3.2">
@@ -284,24 +305,33 @@ div.csl-indent {
 <div id="learning-objectives-1" class="section level3 hasAnchor" number="3.2.1">
 <h3><span class="header-section-number">3.2.1</span> Learning objectives<a href="exercises.html#learning-objectives-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
-<li><p>Understand how to run Python scripts from the command line</p></li>
-<li><p>Use a terminal to navigate directories and execute Python code</p></li>
+<li>Understand how to run Python scripts from the command line</li>
 </ul>
 </div>
 <div id="hello-world-example" class="section level3 hasAnchor" number="3.2.2">
 <h3><span class="header-section-number">3.2.2</span> Hello world example<a href="exercises.html#hello-world-example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: decimal">
-<li><p>Open the terminal.</p></li>
-<li><p>Navigate to the directory where you want to create your Python script.</p></li>
-<li><p>Create a new file named <code>hello.py</code> using a text editor of your choice (e.g., <code>nano</code>, <code>vim</code>, or <code>touch</code>).</p></li>
-<li><p>Open <code>hello.py</code> in the text editor and write the following code:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="exercises.html#cb15-1" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Hello, world!&quot;</span>)</span></code></pre></div></li>
-<li><p>Save the file and exit the text editor.</p></li>
+<ul>
+<li><p>Follow the steps from the <strong><em>SciServer</em></strong> lesson</p>
+<ul>
+<li><p>Login to SciServer and start a new jupyter notebook</p></li>
+<li><p>Start a new terminal session</p></li>
+</ul></li>
+<li><p>Create a new file named <code>01-helloworld.py</code> using the text editor and write the following code:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="exercises.html#cb15-1" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
+<span id="cb15-2"><a href="exercises.html#cb15-2" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Hello, world!&quot;</span>)</span></code></pre></div></li>
+<li><p>Save the file and make it executable:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="exercises.html#cb16-1" tabindex="-1"></a><span class="fu">chmod</span> +x 01-helloworld.py</span></code></pre></div></li>
 <li><p>In the terminal, run the script by typing:</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="exercises.html#cb16-1" tabindex="-1"></a><span class="ex">python</span> hello.py</span></code></pre></div></li>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="exercises.html#cb17-1" tabindex="-1"></a><span class="ex">./01-helloworld.py</span></span></code></pre></div></li>
 <li><p>You should see the output:</p>
 <pre><code>Hello, world!</code></pre></li>
-</ol>
+</ul>
+<p>Congratulations! You have just:</p>
+<ul>
+<li><p>Created a Python script that prints “Hello, world!” to the terminal</p></li>
+<li><p>Made the script executable</p></li>
+<li><p>Ran the script from the command line</p></li>
+</ul>
 </div>
 </div>
 <div id="command-line-arguments" class="section level2 hasAnchor" number="3.3">
