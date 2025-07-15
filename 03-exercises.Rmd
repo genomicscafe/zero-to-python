@@ -54,37 +54,44 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1Covg_bpPYGKnTVbO
 
 - Understand how to run Python scripts from the command line
 
-- Use a terminal to navigate directories and execute Python code
-
 ### Hello world example
 
-1. Open the terminal.
+- Follow the steps from the ***SciServer*** lesson
+    
+    - Login to SciServer and start a new jupyter notebook
 
-2. Navigate to the directory where you want to create your Python script.
+    - Start a new terminal session
+    
 
-3. Create a new file named `hello.py` using a text editor of your choice (e.g., `nano`, `vim`, or `touch`).
+- Create a new file named `01-helloworld.py` using the text editor and write the following code:
 
-4. Open `hello.py` in the text editor and write the following code:
+    ```python
+    #!/usr/bin/env python3
+    print("Hello, world!")
+    ```
 
-   ```python
-   print("Hello, world!")
-   ```
+- Save the file and make it executable:
 
-5. Save the file and exit the text editor.
+    ```bash
+    chmod +x 01-helloworld.py
+    ```
 
-6. In the terminal, run the script by typing:
+- In the terminal, run the script by typing:
 
-   ```bash
-   python hello.py
-   ```
+    ```bash
+    ./01-helloworld.py
+    ```
 
-7. You should see the output:
+- You should see the output:
 
    ```
    Hello, world!
    ```
 
-
+Congratulations! You have just:
+    - Created a Python script that prints "Hello, world!" to the terminal
+    - Made the script executable
+    - Ran the script from the command line
 
 ## Command line arguments
 
