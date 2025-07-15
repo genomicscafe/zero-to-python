@@ -1,4 +1,4 @@
-# {zero-to-python}
+# zero-to-python
 
 This course was created from [this GitHub template](https://github.com/ottrproject/OTTR_Template).
 
