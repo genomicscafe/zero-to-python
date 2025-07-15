@@ -90,11 +90,11 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1Covg_bpPYGKnTVbO
 
 Congratulations! You have just:
 
-    - Created a Python script that prints "Hello, world!" to the terminal
+- Created a Python script that prints "Hello, world!" to the terminal
 
-    - Made the script executable
-    
-    - Ran the script from the command line
+- Made the script executable
+
+- Ran the script from the command line
 
 ## Command line arguments
 
