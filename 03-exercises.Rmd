@@ -131,7 +131,7 @@ You'll see output like `['./02-arguments.py', 'hello', 'world', '123']`
 The `sys` module provide access to the system-specific parameter. The variable `sys.argv` contains all command line arguments passed to your script, including the script name itself as the first element.
 
 
-## Unverstanding Lists
+## Understanding Lists
 
 Lists in Python are ordered collections of items enclosed in square brackets, like `[1, 2, 3]` or `["apple", "banana"]`. Lists can contain different types of data and are accessed by the position (index), starting from 0. For example, `my_list[0]` gets the first item, `my_list[1]` gets the second item, and so in.
 
