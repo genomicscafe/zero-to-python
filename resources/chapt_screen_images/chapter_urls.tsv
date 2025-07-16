@@ -2,6 +2,12 @@ url	chapt_title	img_path
 https://genomicscafe.github.io/zero-to-python/index.html	About this Course	./resources/chapt_screen_images/index.png
 https://genomicscafe.github.io/zero-to-python/introduction.html	1 Introduction	./resources/chapt_screen_images/introduction.png
 https://genomicscafe.github.io/zero-to-python/a-new-chapter.html	2 A new chapter	./resources/chapt_screen_images/a-new-chapter.png
-https://genomicscafe.github.io/zero-to-python/exercises.html	3 Exercises	./resources/chapt_screen_images/exercises.png
+https://genomicscafe.github.io/zero-to-python/running-programs.html	3 Running Programs	./resources/chapt_screen_images/running-programs.png
+https://genomicscafe.github.io/zero-to-python/hello-world.html	4 Hello, World!	./resources/chapt_screen_images/hello-world.png
+https://genomicscafe.github.io/zero-to-python/command-line-arguments.html	5 Command line arguments	./resources/chapt_screen_images/command-line-arguments.png
+https://genomicscafe.github.io/zero-to-python/parsing-file-line-by-line.html	6 Parsing file line by line	./resources/chapt_screen_images/parsing-file-line-by-line.png
+https://genomicscafe.github.io/zero-to-python/head.html	7 head.py	./resources/chapt_screen_images/head.png
+https://genomicscafe.github.io/zero-to-python/grep.html	8 grep.py	./resources/chapt_screen_images/grep.png
+https://genomicscafe.github.io/zero-to-python/cut.html	9 cut.py	./resources/chapt_screen_images/cut.png
 https://genomicscafe.github.io/zero-to-python/about-the-authors.html	About the Authors	./resources/chapt_screen_images/about-the-authors.png
-https://genomicscafe.github.io/zero-to-python/references.html	4 References	./resources/chapt_screen_images/references.png
+https://genomicscafe.github.io/zero-to-python/references.html	10 References	./resources/chapt_screen_images/references.png
