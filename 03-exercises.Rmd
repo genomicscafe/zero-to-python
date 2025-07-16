@@ -4,13 +4,22 @@ knitr::opts_chunk$set(out.width = "100%")
 
 
 
-# Unix
+# Running Programs
 
 :::{.notice}
 
 Following is based on the “SciServer Essentials 2.0” image described in Ch 2. Setup Compute
 
 :::
+
+## Learning objectives
+
+- Run a UNIX command
+
+- Wrap a command in a Bash script with `#!`
+
+- Make a Bash script executable
+
 
 ## Run a command
 
@@ -52,7 +61,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1Covg_bpPYGKnTVbO
 
 
 
-# Python
+# Hello, World!
 
 ## Learning objectives
 
