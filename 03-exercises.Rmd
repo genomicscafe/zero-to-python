@@ -1,6 +1,10 @@
-# Exercises
+```{r echo = FALSE}
+knitr::opts_chunk$set(out.width = "100%")
+```
 
-## Unix
+
+
+# Unix
 
 :::{.notice}
 
@@ -8,7 +12,7 @@ Following is based on the “SciServer Essentials 2.0” image described in Ch 2
 
 :::
 
-### Run a command
+## Run a command
 
 - Start a terminal
 
@@ -25,7 +29,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1Covg_bpPYGKnTVbO
 ```
 
 
-### Wrap a command in a Bash
+## Wrap a command in a Bash
 
 - Create Text File
 
@@ -48,13 +52,13 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1Covg_bpPYGKnTVbO
 
 
 
-## Python
+# Python
 
-### Learning objectives
+## Learning objectives
 
 - Understand how to run Python scripts from the command line
 
-### Hello world example
+## Hello world example
 
 - Follow the steps from the ***SciServer*** lesson
     
@@ -96,24 +100,24 @@ Congratulations! You have just:
 
 - Ran the script from the command line
 
-## Command line arguments
+# Command line arguments
 
-### import sys
+## import sys
 
-### sys.argv
+## sys.argv
 
-### lists
+## lists
 
-### types
+## types
 
-## Parsing file line by line
+# Parsing file line by line
 
-### File streams
+## File streams
 
-### for loops
+## for loops
 
-## head.py
+# head.py
 
-## grep.py
+# grep.py
 
-## cut.py
+# cut.py
