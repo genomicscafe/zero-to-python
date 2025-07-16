@@ -1,6 +1,8 @@
-# Exercises
 
-## Unix
+
+
+
+# Running Programs
 
 :::{.notice}
 
@@ -8,41 +10,50 @@ Following is based on the “SciServer Essentials 2.0” image described in Ch 2
 
 :::
 
-### Run a command
+## Learning objectives
+
+- Run a UNIX command
+
+- Wrap a command in a Bash script with `#!`
+
+- Make a Bash script executable
+
+
+## Run a command
 
 - Start a terminal
 
-![](03-exercises_files/figure-docx//1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo_g36ef0094ecf_0_0.png)<!-- -->
+![](03-exercises_files/figure-docx//1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo_g36ef0094ecf_0_0.png){width=100%}
 
 Run the `ls -l` command to list files (the `-l` is a command line argument that instructs the `ls` program to modify its operation so that longer details are provided about each file)
 
-![](03-exercises_files/figure-docx//1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo_g36ef0094ecf_0_8.png)<!-- -->
+![](03-exercises_files/figure-docx//1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo_g36ef0094ecf_0_8.png){width=100%}
 
 
-### Wrap a command in a Bash
+## Wrap a command in a Bash
 
 - Create Text File
 
-![](03-exercises_files/figure-docx//1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo_g36ef0094ecf_0_29.png)<!-- -->
+![](03-exercises_files/figure-docx//1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo_g36ef0094ecf_0_29.png){width=100%}
 
 - Write your first Bash script
 
-![](03-exercises_files/figure-docx//1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo_g36ef0094ecf_0_40.png)<!-- -->
+![](03-exercises_files/figure-docx//1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo_g36ef0094ecf_0_40.png){width=100%}
 
 
 - Run `00-hello.sh`
 
-![](03-exercises_files/figure-docx//1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo_g36ef0094ecf_0_45.png)<!-- -->
+![](03-exercises_files/figure-docx//1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo_g36ef0094ecf_0_45.png){width=100%}
 
 
 
-## Python
+# Hello, World!
 
-### Learning objectives
+## Learning objectives
 
 - Understand how to run Python scripts from the command line
 
-### Hello world example
+## Hello world example
 
 - Follow the steps from the ***SciServer*** lesson
     
@@ -84,24 +95,107 @@ Congratulations! You have just:
 
 - Ran the script from the command line
 
-## Command line arguments
+# Command line arguments
 
-### import sys
+## Printing All Command Line Arguments
 
-### sys.argv
+Let's make our Python scripts interactive by accepting input from the command line. Create a new file called `02-arguments.py` and type:
 
-### lists
+```python
+#!/usr/bin/env python3
 
-### types
+import sys
 
-## Parsing file line by line
+print(sys.argv)
+```
 
-### File streams
+Save the file and make it executable:
 
-### for loops
+```bash
+chmod +x 02-arguments.py
+```
 
-## head.py
+Now run it directly with some arguments:
 
-## grep.py
+```bash
+./02-arguments.py hello world 123
+```
 
-## cut.py
+You'll see output like `['./02-arguments.py', 'hello', 'world', '123']`
+
+The `sys` module provide access to the system-specific parameter. The variable `sys.argv` contains all command line arguments passed to your script, including the script name itself as the first element.
+
+
+## Understanding Lists
+
+Lists in Python are ordered collections of items enclosed in square brackets, like `[1, 2, 3]` or `["apple", "banana"]`. Lists can contain different types of data and are accessed by the position (index), starting from 0. For example, `my_list[0]` gets the first item, `my_list[1]` gets the second item, and so in.
+
+
+## Accessing Specific Arguments
+
+Lets modify our script to print just the second command line argument:
+
+```python
+#!/usr/bin/env python3
+
+import sys
+
+print("Script name:", sys.argv[0])
+print("First argument:", sys.argv[1])
+```
+
+Run it with: `./02-arguments.py hello`
+
+This prints:
+
+```bash
+Script name: ./02-arguments.py
+First argument: hello
+```
+
+Notice how `sys.argv[0]` is always the script name, so the first actual argument is at index 1.
+
+***Warning***: If you don't provide enough arguments, Python will crash with an "IndexError". We'll learn to handle this with `if` statements later.
+
+## Arguments Are Strings
+
+Command line arguments are always strings, even if they look like numbers. Update `02-arguments.py`:
+
+```python
+#!/usr/bin/env python3
+
+import sys
+
+# This won't work as expected
+result = sys.argv[1] + sys.argv[2]
+print("Without conversion:", result)
+
+# Convert strings to integers first
+num1 = int(sys.argv[1])
+num2 = int(sys.argv[2])
+print("With conversion:", num1 + num2)
+```
+
+Run it with: `./02-arguments.py 5 3`
+
+Output:
+
+```bash
+Without conversion: 53
+With conversion: 8
+```
+
+Without conversion, Python concatenates the strings "5" and "3" into "53". The `int()` function converts string representations of numbers into actual integers that can be used in mathematical operations.
+
+
+# Parsing file line by line
+
+## File streams
+
+## for loops
+
+# head.py
+
+# grep.py
+
+# cut.py
