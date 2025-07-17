@@ -270,8 +270,14 @@ To read the file and print each line, we can use a `for` loop.
 import sys
 
 my_file = open(sys.argv[1])
-for line in my_file:
-    print(line.strip())
+
+# for iterates through files
+for my_line in my_file:
+    # objects have methods
+    my_line = my_line.rstrip("\n")
+    print( my_line )
+
+my_file.close()
 ```
 
 - Save it and run the script again
@@ -288,49 +294,6 @@ banana
 cherry
 date
 ```
-
-We can also use for loops to read multiple files. For example, to read files `sample1.txt` and `sample2.txt`.
-
-- create a new file called `sample2.txt` with the following content
-
-```bash
-echo -e "fig\nkiwi\nlemon" > sample2.txt
-```
-
-- Update `03-files.py` to read both files
-
-```python
-#!/usr/bin/env python3
-
-import sys
-
-my_file = open( sys.argv[1] )
-
-# for iterates through files
-for my_line in my_file:
-    # objects have methods
-    my_line = my_line.rstrip("\n")
-    print( my_line )
-
-my_file.close()
-```
-- Save it and run the script with both files
-
-```bash
-./03-files.py sample1.txt sample2.txt
-```
-
-This will print all lines from both files:
-
-```bash
-apple
-banana
-cherry
-date
-fig
-kiwi
-lemon
-``` 
 
 Congratulations! You have just:
 
