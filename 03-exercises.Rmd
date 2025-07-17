@@ -304,6 +304,8 @@ echo -e "fig\nkiwi\nlemon" > sample2.txt
 
 import sys
 
+my_file = open( sys.argv[1] )
+
 # for iterates through files
 for my_line in my_file:
     # objects have methods
