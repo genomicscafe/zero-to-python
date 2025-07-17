@@ -224,7 +224,7 @@ This creates a file with five fruit names, each on its own line.
 
 ## File Streams in Python
 
-A file stream is like a pipeline that lets you read data from a file one piece at a time. The omst common way to open a file is using the `open()` function.
+A file stream is like a pipeline that lets you read data from a file one piece at a time. The most common way to open a file is using the `open()` function.
 
 - Create a new Python script called `03-files.py`
 
