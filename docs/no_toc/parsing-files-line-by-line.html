@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Parsing file line by line | Course Name</title>
+  <title>Chapter 6 Parsing files line by line | Course Name</title>
   <meta name="description" content="Description about Course/Book." />
   <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 Parsing file line by line | Course Name" />
+  <meta property="og:title" content="Chapter 6 Parsing files line by line | Course Name" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Description about Course/Book." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Parsing file line by line | Course Name" />
+  <meta name="twitter:title" content="Chapter 6 Parsing files line by line | Course Name" />
   
   <meta name="twitter:description" content="Description about Course/Book." />
   
@@ -212,7 +212,7 @@ div.csl-indent {
 <li class="chapter" data-level="4" data-path="hello-world.html"><a href="hello-world.html"><i class="fa fa-check"></i><b>4</b> Hello, World!</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="hello-world.html"><a href="hello-world.html#learning-objectives-2"><i class="fa fa-check"></i><b>4.1</b> Learning objectives</a></li>
-<li class="chapter" data-level="4.2" data-path="hello-world.html"><a href="hello-world.html#hello-world-example"><i class="fa fa-check"></i><b>4.2</b> Hello world example</a></li>
+<li class="chapter" data-level="4.2" data-path="hello-world.html"><a href="hello-world.html#hello-world-example"><i class="fa fa-check"></i><b>4.2</b> Hello, World! example</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="command-line-arguments.html"><a href="command-line-arguments.html"><i class="fa fa-check"></i><b>5</b> Command line arguments</a>
 <ul>
@@ -221,10 +221,11 @@ div.csl-indent {
 <li class="chapter" data-level="5.3" data-path="command-line-arguments.html"><a href="command-line-arguments.html#accessing-specific-arguments"><i class="fa fa-check"></i><b>5.3</b> Accessing Specific Arguments</a></li>
 <li class="chapter" data-level="5.4" data-path="command-line-arguments.html"><a href="command-line-arguments.html#arguments-are-strings"><i class="fa fa-check"></i><b>5.4</b> Arguments Are Strings</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="parsing-file-line-by-line.html"><a href="parsing-file-line-by-line.html"><i class="fa fa-check"></i><b>6</b> Parsing file line by line</a>
+<li class="chapter" data-level="6" data-path="parsing-files-line-by-line.html"><a href="parsing-files-line-by-line.html"><i class="fa fa-check"></i><b>6</b> Parsing files line by line</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="parsing-file-line-by-line.html"><a href="parsing-file-line-by-line.html#file-streams"><i class="fa fa-check"></i><b>6.1</b> File streams</a></li>
-<li class="chapter" data-level="6.2" data-path="parsing-file-line-by-line.html"><a href="parsing-file-line-by-line.html#for-loops"><i class="fa fa-check"></i><b>6.2</b> for loops</a></li>
+<li class="chapter" data-level="6.1" data-path="parsing-files-line-by-line.html"><a href="parsing-files-line-by-line.html#create-a-test-file"><i class="fa fa-check"></i><b>6.1</b> Create a Test File</a></li>
+<li class="chapter" data-level="6.2" data-path="parsing-files-line-by-line.html"><a href="parsing-files-line-by-line.html#file-streams-in-python"><i class="fa fa-check"></i><b>6.2</b> File Streams in Python</a></li>
+<li class="chapter" data-level="6.3" data-path="parsing-files-line-by-line.html"><a href="parsing-files-line-by-line.html#for-loops"><i class="fa fa-check"></i><b>6.3</b> <code>for</code> loops</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="head.html"><a href="head.html"><i class="fa fa-check"></i><b>7</b> head.py</a></li>
 <li class="chapter" data-level="8" data-path="grep.html"><a href="grep.html"><i class="fa fa-check"></i><b>8</b> grep.py</a></li>
@@ -266,13 +267,72 @@ div.csl-indent {
 <div class="hero-image-container">
   <img class= "hero-image" src= "https://github.com/ottrproject/OTTR_Template/raw/main/assets/dasl_thin_main_image.png">
 </div>
-<div id="parsing-file-line-by-line" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">Chapter 6</span> Parsing file line by line<a href="parsing-file-line-by-line.html#parsing-file-line-by-line" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="file-streams" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> File streams<a href="parsing-file-line-by-line.html#file-streams" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="parsing-files-line-by-line" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Parsing files line by line<a href="parsing-files-line-by-line.html#parsing-files-line-by-line" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="create-a-test-file" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Create a Test File<a href="parsing-files-line-by-line.html#create-a-test-file" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><p>Let’s create a simple text file called <code>sample.txt</code> using the Jupyter text editor</p>
+<p>The file should contain the following lines:</p>
+<pre><code>apple
+banana
+cherry
+date
+</code></pre></li>
+</ul>
 </div>
-<div id="for-loops" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> for loops<a href="parsing-file-line-by-line.html#for-loops" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="file-streams-in-python" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> File Streams in Python<a href="parsing-files-line-by-line.html#file-streams-in-python" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A file stream is like a pipeline that lets you read data from a file one piece at a time. The most common way to open a file is using the <code>open()</code> function.</p>
+<ul>
+<li><p>Create a new Python script called <code>03-files.py</code></p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="parsing-files-line-by-line.html#cb27-1" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
+<span id="cb27-2"><a href="parsing-files-line-by-line.html#cb27-2" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="parsing-files-line-by-line.html#cb27-3" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb27-4"><a href="parsing-files-line-by-line.html#cb27-4" tabindex="-1"></a></span>
+<span id="cb27-5"><a href="parsing-files-line-by-line.html#cb27-5" tabindex="-1"></a>my_file <span class="op">=</span> <span class="bu">open</span>( sys.argv[<span class="dv">1</span>] )</span>
+<span id="cb27-6"><a href="parsing-files-line-by-line.html#cb27-6" tabindex="-1"></a><span class="bu">print</span>(my_file)</span></code></pre></div></li>
+<li><p>Save it and make it executable</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb28-1"><a href="parsing-files-line-by-line.html#cb28-1" tabindex="-1"></a><span class="fu">chmod</span> +x 03-files.py</span></code></pre></div></li>
+<li><p>Run the script with the file name as an argument</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb29-1"><a href="parsing-files-line-by-line.html#cb29-1" tabindex="-1"></a><span class="ex">./03-files.py</span> sample.txt</span></code></pre></div>
+<p>This will print something like</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb30-1"><a href="parsing-files-line-by-line.html#cb30-1" tabindex="-1"></a><span class="op">&lt;</span>_io.TextIOWrapper <span class="va">name</span><span class="op">=</span><span class="st">&#39;sample1.txt&#39;</span> <span class="va">mode</span><span class="op">=</span><span class="st">&#39;r&#39;</span> <span class="va">encoding</span><span class="op">=</span><span class="st">&#39;UTF-8&#39;</span><span class="op">&gt;</span></span></code></pre></div></li>
+</ul>
+<p>As you can see, the <code>print()</code> function can’t print the file content directly. This output just indicates the file <code>sample1.txt</code> is opened in read mode (<code>'r'</code>) with UTF-8 encoding.</p>
+</div>
+<div id="for-loops" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> <code>for</code> loops<a href="parsing-files-line-by-line.html#for-loops" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To read the file and print each line, we can use a <code>for</code> loop.</p>
+<ul>
+<li><p>Update <code>03-files.py</code>:</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="parsing-files-line-by-line.html#cb31-1" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
+<span id="cb31-2"><a href="parsing-files-line-by-line.html#cb31-2" tabindex="-1"></a></span>
+<span id="cb31-3"><a href="parsing-files-line-by-line.html#cb31-3" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb31-4"><a href="parsing-files-line-by-line.html#cb31-4" tabindex="-1"></a></span>
+<span id="cb31-5"><a href="parsing-files-line-by-line.html#cb31-5" tabindex="-1"></a>my_file <span class="op">=</span> <span class="bu">open</span>(sys.argv[<span class="dv">1</span>])</span>
+<span id="cb31-6"><a href="parsing-files-line-by-line.html#cb31-6" tabindex="-1"></a></span>
+<span id="cb31-7"><a href="parsing-files-line-by-line.html#cb31-7" tabindex="-1"></a><span class="co"># for iterates through files</span></span>
+<span id="cb31-8"><a href="parsing-files-line-by-line.html#cb31-8" tabindex="-1"></a><span class="cf">for</span> my_line <span class="kw">in</span> my_file:</span>
+<span id="cb31-9"><a href="parsing-files-line-by-line.html#cb31-9" tabindex="-1"></a>    <span class="co"># objects have methods</span></span>
+<span id="cb31-10"><a href="parsing-files-line-by-line.html#cb31-10" tabindex="-1"></a>    my_line <span class="op">=</span> my_line.rstrip(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb31-11"><a href="parsing-files-line-by-line.html#cb31-11" tabindex="-1"></a>    <span class="bu">print</span>( my_line )</span>
+<span id="cb31-12"><a href="parsing-files-line-by-line.html#cb31-12" tabindex="-1"></a></span>
+<span id="cb31-13"><a href="parsing-files-line-by-line.html#cb31-13" tabindex="-1"></a>my_file.close()</span></code></pre></div></li>
+<li><p>Save it and run the script again</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb32-1"><a href="parsing-files-line-by-line.html#cb32-1" tabindex="-1"></a><span class="ex">./03-files.py</span> sample1.txt</span></code></pre></div>
+<p>This will print each line of the file without extra spaces or newlines</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb33-1"><a href="parsing-files-line-by-line.html#cb33-1" tabindex="-1"></a><span class="ex">apple</span></span>
+<span id="cb33-2"><a href="parsing-files-line-by-line.html#cb33-2" tabindex="-1"></a><span class="ex">banana</span></span>
+<span id="cb33-3"><a href="parsing-files-line-by-line.html#cb33-3" tabindex="-1"></a><span class="ex">cherry</span></span>
+<span id="cb33-4"><a href="parsing-files-line-by-line.html#cb33-4" tabindex="-1"></a><span class="fu">date</span></span></code></pre></div></li>
+</ul>
+<p>Congratulations! You have just:</p>
+<ul>
+<li><p>Created a Python script that reads a file</p></li>
+<li><p>Used a <code>for</code> loop to iterate through each line in the file</p></li>
+<li><p>Printed each line without extra spaces or newlines</p></li>
+</ul>
 </div>
 </div>
 <hr>

@@ -212,7 +212,7 @@ div.csl-indent {
 <li class="chapter" data-level="4" data-path="hello-world.html"><a href="hello-world.html"><i class="fa fa-check"></i><b>4</b> Hello, World!</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="hello-world.html"><a href="hello-world.html#learning-objectives-2"><i class="fa fa-check"></i><b>4.1</b> Learning objectives</a></li>
-<li class="chapter" data-level="4.2" data-path="hello-world.html"><a href="hello-world.html#hello-world-example"><i class="fa fa-check"></i><b>4.2</b> Hello world example</a></li>
+<li class="chapter" data-level="4.2" data-path="hello-world.html"><a href="hello-world.html#hello-world-example"><i class="fa fa-check"></i><b>4.2</b> Hello, World! example</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="command-line-arguments.html"><a href="command-line-arguments.html"><i class="fa fa-check"></i><b>5</b> Command line arguments</a>
 <ul>
@@ -221,10 +221,11 @@ div.csl-indent {
 <li class="chapter" data-level="5.3" data-path="command-line-arguments.html"><a href="command-line-arguments.html#accessing-specific-arguments"><i class="fa fa-check"></i><b>5.3</b> Accessing Specific Arguments</a></li>
 <li class="chapter" data-level="5.4" data-path="command-line-arguments.html"><a href="command-line-arguments.html#arguments-are-strings"><i class="fa fa-check"></i><b>5.4</b> Arguments Are Strings</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="parsing-file-line-by-line.html"><a href="parsing-file-line-by-line.html"><i class="fa fa-check"></i><b>6</b> Parsing file line by line</a>
+<li class="chapter" data-level="6" data-path="parsing-files-line-by-line.html"><a href="parsing-files-line-by-line.html"><i class="fa fa-check"></i><b>6</b> Parsing files line by line</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="parsing-file-line-by-line.html"><a href="parsing-file-line-by-line.html#file-streams"><i class="fa fa-check"></i><b>6.1</b> File streams</a></li>
-<li class="chapter" data-level="6.2" data-path="parsing-file-line-by-line.html"><a href="parsing-file-line-by-line.html#for-loops"><i class="fa fa-check"></i><b>6.2</b> for loops</a></li>
+<li class="chapter" data-level="6.1" data-path="parsing-files-line-by-line.html"><a href="parsing-files-line-by-line.html#create-a-test-file"><i class="fa fa-check"></i><b>6.1</b> Create a Test File</a></li>
+<li class="chapter" data-level="6.2" data-path="parsing-files-line-by-line.html"><a href="parsing-files-line-by-line.html#file-streams-in-python"><i class="fa fa-check"></i><b>6.2</b> File Streams in Python</a></li>
+<li class="chapter" data-level="6.3" data-path="parsing-files-line-by-line.html"><a href="parsing-files-line-by-line.html#for-loops"><i class="fa fa-check"></i><b>6.3</b> <code>for</code> loops</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="head.html"><a href="head.html"><i class="fa fa-check"></i><b>7</b> head.py</a></li>
 <li class="chapter" data-level="8" data-path="grep.html"><a href="grep.html"><i class="fa fa-check"></i><b>8</b> grep.py</a></li>
@@ -275,7 +276,7 @@ div.csl-indent {
 </ul>
 </div>
 <div id="hello-world-example" class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> Hello world example<a href="hello-world.html#hello-world-example" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2><span class="header-section-number">4.2</span> Hello, World! example<a href="hello-world.html#hello-world-example" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li><p>Follow the steps from the <strong><em>SciServer</em></strong> lesson</p>
 <ul>
@@ -284,17 +285,17 @@ div.csl-indent {
 </ul></li>
 <li><p>Create a new file named <code>01-helloworld.py</code> using the text editor and write the following code:</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="hello-world.html#cb15-1" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
-<span id="cb15-2"><a href="hello-world.html#cb15-2" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Hello, world!&quot;</span>)</span></code></pre></div></li>
+<span id="cb15-2"><a href="hello-world.html#cb15-2" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Hello, World!&quot;</span>)</span></code></pre></div></li>
 <li><p>Save the file and make it executable:</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="hello-world.html#cb16-1" tabindex="-1"></a><span class="fu">chmod</span> +x 01-helloworld.py</span></code></pre></div></li>
 <li><p>In the terminal, run the script by typing:</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="hello-world.html#cb17-1" tabindex="-1"></a><span class="ex">./01-helloworld.py</span></span></code></pre></div></li>
 <li><p>You should see the output:</p>
-<pre><code>Hello, world!</code></pre></li>
+<pre><code>Hello, World!</code></pre></li>
 </ul>
 <p>Congratulations! You have just:</p>
 <ul>
-<li><p>Created a Python script that prints “Hello, world!” to the terminal</p></li>
+<li><p>Created a Python script that prints “Hello, World!” to the terminal</p></li>
 <li><p>Made the script executable</p></li>
 <li><p>Ran the script from the command line</p></li>
 </ul>
