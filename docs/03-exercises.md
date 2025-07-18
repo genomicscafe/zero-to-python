@@ -25,10 +25,13 @@ Following is based on the “SciServer Essentials 2.0” image described in Ch 2
 
 ![](03-exercises_files/figure-docx//1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo_g36ef0094ecf_0_0.png){width=100%}
 
-Run the `ls -l` command to list files (the `-l` is a command line argument that instructs the `ls` program to modify its operation so that longer details are provided about each file)
+- Run the `ls -l` command to list files (the `-l` is a command line argument that instructs the `ls` program to modify its operation so that longer details are provided about each file)
 
 ![](03-exercises_files/figure-docx//1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo_g36ef0094ecf_0_8.png){width=100%}
 
+- Run `echo "Hello, World!"` to print text to the terminal
+
+![](03-exercises_files/figure-docx//1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo_g36ef0094ecf_1_0.png){width=100%}
 
 ## Wrap a command in a Bash
 
@@ -46,6 +49,10 @@ Run the `ls -l` command to list files (the `-l` is a command line argument that 
 ![](03-exercises_files/figure-docx//1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo_g36ef0094ecf_0_45.png){width=100%}
 
 
+Congratulations! You have just:
+
+- Created a Bash script that prints "Hello, World!" to the terminal
+
 
 # Hello, World!
 
@@ -53,7 +60,7 @@ Run the `ls -l` command to list files (the `-l` is a command line argument that 
 
 - Understand how to run Python scripts from the command line
 
-## Hello world example
+## Hello, World! example
 
 - Follow the steps from the ***SciServer*** lesson
     
@@ -66,7 +73,7 @@ Run the `ls -l` command to list files (the `-l` is a command line argument that 
 
     ```python
     #!/usr/bin/env python3
-    print("Hello, world!")
+    print("Hello, World!")
     ```
 
 - Save the file and make it executable:
@@ -84,12 +91,12 @@ Run the `ls -l` command to list files (the `-l` is a command line argument that 
 - You should see the output:
 
    ```
-   Hello, world!
+   Hello, World!
    ```
 
 Congratulations! You have just:
 
-- Created a Python script that prints "Hello, world!" to the terminal
+- Created a Python script that prints "Hello, World!" to the terminal
 
 - Made the script executable
 
@@ -99,29 +106,29 @@ Congratulations! You have just:
 
 ## Printing All Command Line Arguments
 
-Let's make our Python scripts interactive by accepting input from the command line. Create a new file called `02-arguments.py` and type:
+- Let's make our Python scripts interactive by accepting input from the command line. Create a new file called `02-arguments.py` and type:
 
-```python
-#!/usr/bin/env python3
+    ```python
+    #!/usr/bin/env python3
 
-import sys
+    import sys
 
-print(sys.argv)
-```
+    print(sys.argv)
+    ```
 
-Save the file and make it executable:
+- Save the file and make it executable:
 
-```bash
-chmod +x 02-arguments.py
-```
+    ```bash
+    chmod +x 02-arguments.py
+    ```
 
-Now run it directly with some arguments:
+- Now run it directly with some arguments:
 
-```bash
-./02-arguments.py hello world 123
-```
+    ```bash
+    ./02-arguments.py hello world 123
+    ```
 
-You'll see output like `['./02-arguments.py', 'hello', 'world', '123']`
+    You'll see output like `['./02-arguments.py', 'hello', 'world', '123']`
 
 The `sys` module provide access to the system-specific parameter. The variable `sys.argv` contains all command line arguments passed to your script, including the script name itself as the first element.
 
@@ -133,66 +140,166 @@ Lists in Python are ordered collections of items enclosed in square brackets, li
 
 ## Accessing Specific Arguments
 
-Lets modify our script to print just the second command line argument:
+- Lets modify our script to print just the second command line argument:
 
-```python
-#!/usr/bin/env python3
+    ```python
+    #!/usr/bin/env python3
 
-import sys
+    import sys
 
-print("Script name:", sys.argv[0])
-print("First argument:", sys.argv[1])
-```
+    print("Script name:", sys.argv[0])
+    print("First argument:", sys.argv[1])
+    ```
 
-Run it with: `./02-arguments.py hello`
+- Run it with: `./02-arguments.py hello`
 
-This prints:
+    This prints:
 
-```bash
-Script name: ./02-arguments.py
-First argument: hello
-```
+    ```bash
+    Script name: ./02-arguments.py
+    First argument: hello
+    ```
 
-Notice how `sys.argv[0]` is always the script name, so the first actual argument is at index 1.
+    Notice how `sys.argv[0]` is always the script name, so the first actual argument is at index 1
 
-***Warning***: If you don't provide enough arguments, Python will crash with an "IndexError". We'll learn to handle this with `if` statements later.
+    ***Warning***: If you don't provide enough arguments, Python will crash with an "IndexError". We'll learn to handle this with `if` statements later
 
 ## Arguments Are Strings
 
-Command line arguments are always strings, even if they look like numbers. Update `02-arguments.py`:
+Command line arguments are always strings, even if they look like numbers. 
 
-```python
-#!/usr/bin/env python3
+- Update `02-arguments.py`
 
-import sys
+    ```python
+    #!/usr/bin/env python3
 
-# This won't work as expected
-result = sys.argv[1] + sys.argv[2]
-print("Without conversion:", result)
+    import sys
 
-# Convert strings to integers first
-num1 = int(sys.argv[1])
-num2 = int(sys.argv[2])
-print("With conversion:", num1 + num2)
-```
+    # This won't work as expected
+    result = sys.argv[1] + sys.argv[2]
+    print("Without conversion:", result)
 
-Run it with: `./02-arguments.py 5 3`
+    # Convert strings to integers first
+    num1 = int(sys.argv[1])
+    num2 = int(sys.argv[2])
+    print("With conversion:", num1 + num2)
+    ```
 
-Output:
+- Run it with: `./02-arguments.py 5 3`
 
-```bash
-Without conversion: 53
-With conversion: 8
-```
+    Output:
+
+    ```bash
+    Without conversion: 53
+    With conversion: 8
+    ```
 
 Without conversion, Python concatenates the strings "5" and "3" into "53". The `int()` function converts string representations of numbers into actual integers that can be used in mathematical operations.
 
+Congratulations! You have just:
 
-# Parsing file line by line
+- Created a Python script that accepts command line arguments
 
-## File streams
+- Accessed specific arguments using `sys.argv`
 
-## for loops
+
+# Parsing files line by line
+
+## Create a Test File
+
+- Let's create a simple text file called `sample.txt` using the Jupyter text editor
+
+    The file should contain the following lines:
+
+    ```
+    apple
+    banana
+    cherry
+    date
+
+    ```
+
+## File Streams in Python
+
+A file stream is like a pipeline that lets you read data from a file one piece at a time. The most common way to open a file is using the `open()` function.
+
+- Create a new Python script called `03-files.py`
+
+    ```python
+    #!/usr/bin/env python3
+
+    import sys
+
+    my_file = open( sys.argv[1] )
+    print(my_file)
+
+    ```
+
+- Save it and make it executable
+
+    ```bash
+    chmod +x 03-files.py
+    ``` 
+
+- Run the script with the file name as an argument
+
+    ```bash
+    ./03-files.py sample.txt
+    ``` 
+
+    This will print something like
+
+    ```bash
+    <_io.TextIOWrapper name='sample1.txt' mode='r' encoding='UTF-8'>
+    ```
+
+As you can see, the `print()` function can't print the file content directly. This output just indicates the file `sample1.txt` is opened in read mode (`'r'`) with UTF-8 encoding.
+
+## `for` loops
+
+To read the file and print each line, we can use a `for` loop. 
+
+- Update `03-files.py`:
+
+    ```python
+    #!/usr/bin/env python3
+
+    import sys
+
+    my_file = open(sys.argv[1])
+
+    # for iterates through files
+    for my_line in my_file:
+        # objects have methods
+        my_line = my_line.rstrip("\n")
+        print( my_line )
+
+    my_file.close()
+    ```
+
+- Save it and run the script again
+
+    ```bash
+    ./03-files.py sample1.txt
+    ```
+
+    This will print each line of the file without extra spaces or newlines
+
+    ```bash
+    apple
+    banana
+    cherry
+    date
+    ```
+
+Congratulations! You have just:
+
+- Created a Python script that reads a file 
+
+- Used a `for` loop to iterate through each line in the file
+
+- Printed each line without extra spaces or newlines
+
 
 # head.py
 

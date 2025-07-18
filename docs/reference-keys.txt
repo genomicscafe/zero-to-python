@@ -36,8 +36,9 @@ printing-all-command-line-arguments
 understanding-lists
 accessing-specific-arguments
 arguments-are-strings
-parsing-file-line-by-line
-file-streams
+parsing-files-line-by-line
+create-a-test-file
+file-streams-in-python
 for-loops
 head.py
 grep.py
