@@ -74,7 +74,7 @@ Congratulations! You have just:
 
 - Understand how to run Python scripts from the command line
 
-## Hello world example
+## Hello, World! example
 
 - Follow the steps from the ***SciServer*** lesson
     
@@ -87,7 +87,7 @@ Congratulations! You have just:
 
     ```python
     #!/usr/bin/env python3
-    print("Hello, world!")
+    print("Hello, World!")
     ```
 
 - Save the file and make it executable:
@@ -105,12 +105,12 @@ Congratulations! You have just:
 - You should see the output:
 
    ```
-   Hello, world!
+   Hello, World!
    ```
 
 Congratulations! You have just:
 
-- Created a Python script that prints "Hello, world!" to the terminal
+- Created a Python script that prints "Hello, World!" to the terminal
 
 - Made the script executable
 
