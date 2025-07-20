@@ -27,6 +27,7 @@ Generis
 GH
 Github
 GitHub
+hashbang
 hashbangs
 https
 ies
