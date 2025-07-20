@@ -90,6 +90,16 @@ Congratulations! You have just:
     print("Hello, World!")
     ```
 
+    - The begining of the first line, `#!`,  it is called a "hashbang" or "shebang". That indicates which interpreted should process (Python in this case) the file.
+
+    - We use `/usr/bin/env` to find the Python interpreter in the user's environment, which is more flexible than hardcoding a specific path like `/usr/bin/python3`. This way, it works regardless of where Python is installed on the system.
+
+    - `python3` is the interpreter that will run the script. It ensures that the script is executed with Python 3, which is important because Python 2 and Python 3 have different syntax and features.
+
+    - Lastly `print("Hello, World!")` is the actual Python code that prints "Hello, World!" to the terminal.
+
+    
+
 - Save the file and make it executable:
 
     ```bash
@@ -117,6 +127,14 @@ Congratulations! You have just:
 - Ran the script from the command line
 
 # Command line arguments
+
+## Learning objectives
+
+- Understand how to accept command line arguments in Python scripts
+
+- Learn how to access command line arguments using the `sys` module
+
+- Understand how to handle command line arguments
 
 ## Printing All Command Line Arguments
 
@@ -219,6 +237,12 @@ Congratulations! You have just:
 
 # Parsing files line by line
 
+## Learning objectives
+
+- Understand how to read files in Python
+
+- Learn how to iterate through lines in a file using a `for` loop
+
 ## Create a Test File
 
 - Let's create a simple text file called `sample.txt` using the Jupyter text editor
@@ -290,6 +314,7 @@ To read the file and print each line, we can use a `for` loop.
 
     my_file.close()
     ```
+    - We use `my_file.close()` to close the file after we're done reading it. This is important to free up system resources.
 
 - Save it and run the script again
 
@@ -316,6 +341,138 @@ Congratulations! You have just:
 
 
 # head.py
+
+## Learning objectives
+
+- How to replicate the `head` bash command in Python
+
+- Understand how to read a file and print the first few lines
+
+- Learn how to use a `for` loop to limit the number of lines printed
+
+## Create a new file
+
+- Let's create a simple text file called `sample2.txt` using the Jupyter text editor
+
+    The file should contain the following lines:
+
+    ```
+    apple
+    banana
+    cherry
+    date
+    elderberry
+    fig
+    grape
+    peach
+    kiwi
+    lemon
+    ```
+
+## Practice the `head` command
+
+The `head` command in Bash prints the first few lines of a file. By default, it shows the first 10 lines, but you can specify a different number with the `-n` option.
+
+- In the terminal, run the command:
+
+    ```bash
+    head sample2.txt
+    ```
+    
+    - This will print all the 10 lines of `sample2.txt`
+
+        ```
+        apple
+        banana
+        cherry
+        date
+        elderberry
+        fig
+        grape
+        peach
+        kiwi
+        lemon
+        ```
+- Now try running it with the `-n` option to print only the first 5 lines
+
+    ```bash
+    head -n 5 sample2.txt
+    ```
+    - You should see the following output
+
+        ```
+        apple
+        banana
+        cherry
+        date
+        elderberry
+        ```
+
+## Replicate the `head` command in Python
+
+Now let's create a Python script that replicates the `head` command.
+
+- Create a new Python script called `04-head.py`
+
+    ```python
+    #!/usr/bin/env python3
+
+    import sys
+
+    my_file = open( sys.argv[1] )
+
+    max_lines = 10
+    if len(sys.argv) > 2:
+        max_lines = int(sys.argv[2])
+
+    # be careful of off-by-1 errors
+    i = 0
+    for my_line in my_file:
+        if i >= max_lines:
+            break
+        my_line = my_line.rstrip("\n")
+        print( my_line )
+        i = i + 1
+
+    my_file.close()
+    ```
+    
+    - The script takes two command line arguments: 
+        - the file name `sys.argv[1]`
+        
+        - The number of lines to print `sys.argv[2]`
+        
+        `If` the second argument is not provided, it defaults to 10.
+        
+          - `If` statements are used to check if the number of lines exceeds the maximum specified.
+
+- Save the file and make it executable
+
+    ```bash
+    chmod +x 04-head.py
+    ```
+
+- Run the script with the file name and number of lines as arguments
+
+    ```bash
+    ./04-head.py sample2.txt 5
+    ```
+
+    This will print the first 5 lines of `sample2.txt`
+
+    ```
+    apple
+    banana
+    cherry
+    date
+    elderberry
+    ```
+
+Congratulations! You have just:
+
+- Created a Python script that replicates the `head` command
+
+- Used command line arguments to specify the file and number of lines to print
 
 # grep.py
 
