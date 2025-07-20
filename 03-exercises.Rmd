@@ -90,9 +90,9 @@ Congratulations! You have just:
     print("Hello, World!")
     ```
 
-    - The begining of the first line, `#!`,  it is called a "hashbang" or "shebang". That indicates which interpreted should process (Python in this case) the file.
+    - The beginning of the first line, `#!`,  it is called a "hashbang" or "shebang". That indicates which interpreted should process (Python in this case) the file.
 
-    - We use `/usr/bin/env` to find the Python interpreter in the user's environment, which is more flexible than hardcoding a specific path like `/usr/bin/python3`. This way, it works regardless of where Python is installed on the system.
+    - We use `/usr/bin/env` to find the Python interpreter in the user's environment, which is more flexible than specifying a path like `/usr/bin/python3`. This way, it works regardless of where Python is installed on the system.
 
     - `python3` is the interpreter that will run the script. It ensures that the script is executed with Python 3, which is important because Python 2 and Python 3 have different syntax and features.
 
@@ -436,7 +436,7 @@ Now let's create a Python script that replicates the `head` command.
 
     my_file.close()
     ```
-    
+
     - The script takes two command line arguments: 
         - the file name `sys.argv[1]`
         
