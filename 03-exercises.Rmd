@@ -16,7 +16,7 @@ Following is based on the “SciServer Essentials 2.0” image described in Ch 2
 
 - Run a UNIX command
 
-- Wrap a command in a Bash script with `#!`
+- Wrap a command in a Bash script
 
 - Make a Bash script executable
 
@@ -444,7 +444,7 @@ Now let's create a Python script that replicates the `head` command.
         
         `If` the second argument is not provided, it defaults to 10.
         
-          - `If` statements are used to check if the number of lines exceeds the maximum specified.
+        - The `If` statement is used to check if the number of lines exceeds the maximum specified.
 
 - Save the file and make it executable
 
