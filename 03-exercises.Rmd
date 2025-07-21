@@ -340,7 +340,7 @@ Congratulations! You have just:
 - Printed each line without extra spaces or newlines
 
 
-# head.py
+# Replicating the `head` command in Python
 
 ## Learning objectives
 
