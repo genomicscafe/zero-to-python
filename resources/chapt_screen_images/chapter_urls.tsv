@@ -1,12 +1,12 @@
 url	chapt_title	img_path
 https://genomicscafe.github.io/zero-to-python/index.html	About this Course	./resources/chapt_screen_images/index.png
 https://genomicscafe.github.io/zero-to-python/introduction.html	1 Introduction	./resources/chapt_screen_images/introduction.png
-https://genomicscafe.github.io/zero-to-python/a-new-chapter.html	2 A new chapter	./resources/chapt_screen_images/a-new-chapter.png
+https://genomicscafe.github.io/zero-to-python/set-up-compute.html	2 Set Up Compute	./resources/chapt_screen_images/set-up-compute.png
 https://genomicscafe.github.io/zero-to-python/running-programs.html	3 Running Programs	./resources/chapt_screen_images/running-programs.png
 https://genomicscafe.github.io/zero-to-python/hello-world.html	4 Hello, World!	./resources/chapt_screen_images/hello-world.png
 https://genomicscafe.github.io/zero-to-python/command-line-arguments.html	5 Command line arguments	./resources/chapt_screen_images/command-line-arguments.png
 https://genomicscafe.github.io/zero-to-python/parsing-files-line-by-line.html	6 Parsing files line by line	./resources/chapt_screen_images/parsing-files-line-by-line.png
-https://genomicscafe.github.io/zero-to-python/head.html	7 head.py	./resources/chapt_screen_images/head.png
+https://genomicscafe.github.io/zero-to-python/replicating-the-head-command-in-python.html	7 Replicating the head command in Python	./resources/chapt_screen_images/replicating-the-head-command-in-python.png
 https://genomicscafe.github.io/zero-to-python/grep.html	8 grep.py	./resources/chapt_screen_images/grep.png
 https://genomicscafe.github.io/zero-to-python/cut.html	9 cut.py	./resources/chapt_screen_images/cut.png
 https://genomicscafe.github.io/zero-to-python/about-the-authors.html	About the Authors	./resources/chapt_screen_images/about-the-authors.png
