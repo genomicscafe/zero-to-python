@@ -1,5 +1,5 @@
 ---
-title: "Course Name"
+title: "Zero-to-Python"
 date: "July, 2025"
 site: bookdown::bookdown_site
 documentclass: book
