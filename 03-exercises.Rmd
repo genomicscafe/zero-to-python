@@ -2,6 +2,52 @@
 knitr::opts_chunk$set(out.width = "100%")
 ```
 
+# Set Up Compute
+
+SciServer is an online platform for doing scientific data analysis.  It is used by scientists studying astronomy, biology, oceanography, and more, and is free as long as you are using it for scientific research.  
+Using SciServer means you do not need a fancy computer or need to install any special programs on your computer, you can just log in with your internet browser to start doing research.
+
+We will use the Jupyter development environment provided in the `SciServer Essentials 2.0` image.  This web-based environment provides all the tools we need for this course: a text editor and a UNIX environment to run Python scripts.
+
+## Join SciServer
+
+The first step is to create an account on SciServer.  To do this, open https://sciserver.org in a web browser and click “Login to SciServer”.  After clicking on “Create a new account”, fill out the form with a username, email, and password.  Note that you cannot change your username later.
+
+```{r, echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo/edit#slide=id.g3710e1bbefd_0_34")
+```
+
+Check your email and click on the verification link.  This will log you into SciServer.
+
+```{r, echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo/edit#slide=id.g3710e1bbefd_0_42")
+```
+
+Confirm that your username appears in the upper right hand corner.
+
+```{r, echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo/edit#slide=id.g3710e1bbefd_0_48")
+```
+
+## Start Jupyter
+
+To create a container running Jupyter, click “Compute” in the SciServer Dashboard (https://apps.sciserver.org/dashboard).  Click on “Create container” to see what possible compute configurations are available and select `SciServer Essentials 2.0`.
+
+```{r, echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo/edit#slide=id.g3710e1bbefd_0_25")
+```
+
+After clicking “Create”, you should now see a new entry in your list of containers.  Confirm that it is using the `SciServer Essentials 2.0` image.  Finally, click on the name of your container and a new tab will open.
+
+```{r, echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo/edit#slide=id.g3710e1bbefd_0_59")
+```
+
+Voila!  You should now see the Jupyter interface.
+
+```{r, echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo/edit#slide=id.g3710e1bbefd_0_64")
+```
 
 
 # Running Programs
@@ -21,7 +67,7 @@ Following is based on the “SciServer Essentials 2.0” image described in Ch 2
 - Make a Bash script executable
 
 
-## Run a command
+## Run a UNIX command
 
 - Start a terminal
 
@@ -41,7 +87,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1Covg_bpPYGKnTVbO
 ottrpal::include_slide("https://docs.google.com/presentation/d/1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo/edit?slide=id.g36ef0094ecf_1_0#slide=id.g36ef0094ecf_1_0")
 ```
 
-## Wrap a command in a Bash
+## Wrap commands in a Bash script
 
 - Create Text File
 
@@ -63,6 +109,8 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1Covg_bpPYGKnTVbO
 ```
 
 
+## Summary
+
 Congratulations! You have just:
 
 - Created a Bash script that prints "Hello, World!" to the terminal
@@ -74,7 +122,7 @@ Congratulations! You have just:
 
 - Understand how to run Python scripts from the command line
 
-## Hello, World! example
+## Python "Hello, World!" example
 
 - Follow the steps from the ***SciServer*** lesson
     
@@ -98,7 +146,8 @@ Congratulations! You have just:
 
     - Lastly `print("Hello, World!")` is the actual Python code that prints "Hello, World!" to the terminal.
 
-    
+
+## Run a Python script    
 
 - Save the file and make it executable:
 
@@ -118,6 +167,8 @@ Congratulations! You have just:
    Hello, World!
    ```
 
+## Summary
+
 Congratulations! You have just:
 
 - Created a Python script that prints "Hello, World!" to the terminal
@@ -125,6 +176,7 @@ Congratulations! You have just:
 - Made the script executable
 
 - Ran the script from the command line
+
 
 # Command line arguments
 
@@ -138,7 +190,7 @@ Congratulations! You have just:
 
 ## Printing All Command Line Arguments
 
-- Let's make our Python scripts interactive by accepting input from the command line. Create a new file called `02-arguments.py` and type:
+Let's make our Python scripts interactive by accepting input from the command line. Create a new file called `02-arguments.py` and type:
 
     ```python
     #!/usr/bin/env python3
@@ -228,6 +280,8 @@ Command line arguments are always strings, even if they look like numbers.
 
 Without conversion, Python concatenates the strings "5" and "3" into "53". The `int()` function converts string representations of numbers into actual integers that can be used in mathematical operations.
 
+## Summary
+
 Congratulations! You have just:
 
 - Created a Python script that accepts command line arguments
@@ -261,7 +315,7 @@ Congratulations! You have just:
 
 A file stream is like a pipeline that lets you read data from a file one piece at a time. The most common way to open a file is using the `open()` function.
 
-- Create a new Python script called `03-files.py`
+- Create a new Python script called `03-parse-text-file.py`
 
     ```python
     #!/usr/bin/env python3
@@ -276,13 +330,13 @@ A file stream is like a pipeline that lets you read data from a file one piece a
 - Save it and make it executable
 
     ```bash
-    chmod +x 03-files.py
+    chmod +x 03-parse-text-file.py
     ``` 
 
 - Run the script with the file name as an argument
 
     ```bash
-    ./03-files.py sample.txt
+    ./03-parse-text-file.py sample.txt
     ``` 
 
     This will print something like
@@ -297,7 +351,7 @@ As you can see, the `print()` function can't print the file content directly. Th
 
 To read the file and print each line, we can use a `for` loop. 
 
-- Update `03-files.py`:
+- Update `03-parse-text-file.py`:
 
     ```python
     #!/usr/bin/env python3
@@ -319,7 +373,7 @@ To read the file and print each line, we can use a `for` loop.
 - Save it and run the script again
 
     ```bash
-    ./03-files.py sample1.txt
+    ./03-parse-text-file.py sample1.txt
     ```
 
     This will print each line of the file without extra spaces or newlines
@@ -330,6 +384,8 @@ To read the file and print each line, we can use a `for` loop.
     cherry
     date
     ```
+
+## Summary
 
 Congratulations! You have just:
 
@@ -467,6 +523,8 @@ Now let's create a Python script that replicates the `head` command.
     date
     elderberry
     ```
+
+## Summary
 
 Congratulations! You have just:
 
