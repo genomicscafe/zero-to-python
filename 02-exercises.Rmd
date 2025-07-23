@@ -102,6 +102,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1Covg_bpPYGKnTVbO
 ```
 
 
+
 - Run `00-hello.sh`
 
 ```{r, echo = FALSE}
@@ -396,7 +397,7 @@ Congratulations! You have just:
 - Printed each line without extra spaces or newlines
 
 
-# Replicating the `head` command in Python
+# Replicating the `head` command
 
 ## Learning objectives
 
@@ -464,11 +465,69 @@ The `head` command in Bash prints the first few lines of a file. By default, it 
         elderberry
         ```
 
-## Replicate the `head` command in Python
+## Start replicating the `head` command in Python
 
-Now let's create a Python script that replicates the `head` command.
+We can replicate the `head` command by implementing a `for` loop to read the file line by line as we introduced in Ch 6. Parsing text files.
 
-- Create a new Python script called `04-head.py`
+`for` loops are great for iterating through items in a collection, like lines in a file. We can use a counter to limit how many lines we print.
+
+```python
+i = 0
+for my_line in my_file:
+    if i >= max_lines:
+        break
+    my_line = my_line.rstrip("\n")
+    print( my_line )
+    i = i + 1  
+```
+
+Key points:
+
+- We can use a counter variable `i` to keep track of how many lines we've printed. `i = i + 1` increments the counter by 1 each time we print a line.
+
+- The `if` statement checks if the number of lines printed exceeds the maximum specified by the user
+
+- The `max_lines` variable is set to 10 by default, but can be changed by providing a second command line argument
+
+
+## Let's put it all together, building the `head` command in Python step by step
+
+
+- Create a new python script called `04-head.py` and add what we introduced in Ch 6. Parsing text files
+
+    ```python
+    #!/usr/bin/env python3
+
+    import sys
+
+    my_file = open( sys.argv[1] )
+
+    for my_line in my_file:
+        my_line = my_line.rstrip("\n")
+        print( my_line )
+
+    my_file.close()
+    ```
+- Now add code after the `open()` to set a maximum number of lines to print or defaulting to 10 if not specified
+
+    ```python
+    max_lines = 10
+    if len(sys.argv) > 2:
+        max_lines = int(sys.argv[2])
+    ```
+
+- Finally, add the `for` loop to limit the number of lines printed
+
+    ````python
+    i = 0
+    for my_line in my_file:
+        if i >= max_lines:
+            break
+        my_line = my_line.rstrip("\n")
+        print( my_line )
+        i = i + 1
+    ````
+- The complete script should look like this:
 
     ```python
     #!/usr/bin/env python3
@@ -481,7 +540,6 @@ Now let's create a Python script that replicates the `head` command.
     if len(sys.argv) > 2:
         max_lines = int(sys.argv[2])
 
-    # be careful of off-by-1 errors
     i = 0
     for my_line in my_file:
         if i >= max_lines:
@@ -492,15 +550,6 @@ Now let's create a Python script that replicates the `head` command.
 
     my_file.close()
     ```
-
-    - The script takes two command line arguments: 
-        - the file name `sys.argv[1]`
-        
-        - The number of lines to print `sys.argv[2]`
-        
-        `If` the second argument is not provided, it defaults to 10.
-        
-        - The `If` statement is used to check if the number of lines exceeds the maximum specified.
 
 - Save the file and make it executable
 
