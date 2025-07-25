@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 10 References | Zero-to-Python</title>
+  <title>Chapter 7 Replicating the head command | Zero-to-Python</title>
   <meta name="description" content="Description about Course/Book." />
   <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 10 References | Zero-to-Python" />
+  <meta property="og:title" content="Chapter 7 Replicating the head command | Zero-to-Python" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Description about Course/Book." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 10 References | Zero-to-Python" />
+  <meta name="twitter:title" content="Chapter 7 Replicating the head command | Zero-to-Python" />
   
   <meta name="twitter:description" content="Description about Course/Book." />
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="assets/dasl_favicon.ico" type="image/x-icon" />
-<link rel="prev" href="about-the-authors.html"/>
-
+<link rel="prev" href="parsing-files-line-by-line.html"/>
+<link rel="next" href="knowledge-check.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -237,10 +237,156 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="hero-image-container">
   <img class= "hero-image" src= "https://github.com/ottrproject/OTTR_Template/raw/main/assets/dasl_thin_main_image.png">
 </div>
-<div id="references" class="section level1 hasAnchor" number="10">
-<h1><span class="header-section-number">Chapter 10</span> References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-
+<div id="replicating-the-head-command" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Replicating the <code>head</code> command<a href="replicating-the-head-command.html#replicating-the-head-command" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="learning-objectives-4" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Learning objectives<a href="replicating-the-head-command.html#learning-objectives-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><p>How to replicate the <code>head</code> bash command in Python</p></li>
+<li><p>Understand how to read a file and print the first few lines</p></li>
+<li><p>Learn how to use a <code>for</code> loop to limit the number of lines printed</p></li>
+</ul>
 </div>
+<div id="create-a-longer-file" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Create a longer file<a href="replicating-the-head-command.html#create-a-longer-file" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><p>Let’s create a simple text file called <code>sample2.txt</code> using the Jupyter text editor</p>
+<p>The file should contain the following lines:</p>
+<pre><code>apple
+banana
+cherry
+date
+elderberry
+fig
+grape
+peach
+kiwi
+lemon</code></pre></li>
+</ul>
+</div>
+<div id="practice-the-head-command" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Practice the <code>head</code> command<a href="replicating-the-head-command.html#practice-the-head-command" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="notice">
+<p>This exercise should be done in the Jupyter terminal.</p>
+</div>
+<p>The <code>head</code> command in Bash prints the first few lines of a file. By default, it shows the first 10 lines, but you can specify a different number with the <code>-n</code> option.</p>
+<ul>
+<li><p>In the terminal, run the command:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb25-1"><a href="replicating-the-head-command.html#cb25-1" tabindex="-1"></a><span class="fu">head</span> sample2.txt</span></code></pre></div>
+<ul>
+<li><p>This will print all the 10 lines of <code>sample2.txt</code></p>
+<pre><code>apple
+banana
+cherry
+date
+elderberry
+fig
+grape
+peach
+kiwi
+lemon</code></pre></li>
+</ul></li>
+<li><p>Now try running it with the <code>-n</code> option to print only the first 5 lines</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb27-1"><a href="replicating-the-head-command.html#cb27-1" tabindex="-1"></a><span class="fu">head</span> <span class="at">-n</span> 5 sample2.txt</span></code></pre></div>
+<ul>
+<li><p>You should see the following output</p>
+<pre><code>apple
+banana
+cherry
+date
+elderberry</code></pre></li>
+</ul></li>
+</ul>
+</div>
+<div id="designing-the-head-algorithm" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Designing the <code>head</code> algorithm<a href="replicating-the-head-command.html#designing-the-head-algorithm" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We can replicate the <code>head</code> command by adding some logic to the <code>for</code> loop we introduced in Ch 6. Parsing text files.</p>
+<p>Starting with a <code>for</code> loop is great for iterating through items in a collection, like lines in a file. We can add a counter variable and a conditional <code>if</code> statement to limit how many lines we print.</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="replicating-the-head-command.html#cb29-1" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb29-2"><a href="replicating-the-head-command.html#cb29-2" tabindex="-1"></a><span class="cf">for</span> my_line <span class="kw">in</span> my_file:</span>
+<span id="cb29-3"><a href="replicating-the-head-command.html#cb29-3" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">&gt;=</span> max_lines:</span>
+<span id="cb29-4"><a href="replicating-the-head-command.html#cb29-4" tabindex="-1"></a>        <span class="cf">break</span></span>
+<span id="cb29-5"><a href="replicating-the-head-command.html#cb29-5" tabindex="-1"></a>    my_line <span class="op">=</span> my_line.rstrip(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb29-6"><a href="replicating-the-head-command.html#cb29-6" tabindex="-1"></a>    <span class="bu">print</span>( my_line )</span>
+<span id="cb29-7"><a href="replicating-the-head-command.html#cb29-7" tabindex="-1"></a>    i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span>  </span></code></pre></div>
+<p>Key points:</p>
+<ul>
+<li><p>We can use a counter variable <code>i</code> to keep track of how many lines we’ve printed. <code>i = i + 1</code> increments the counter by 1 each time we print a line.</p></li>
+<li><p>The <code>if</code> statement checks if the number of lines printed exceeds the maximum specified by the user</p></li>
+<li><p>The <code>max_lines</code> variable is set to 10 by default, but can be changed by providing a second command line argument</p></li>
+</ul>
+</div>
+<div id="coding-step-by-step" class="section level2 hasAnchor" number="7.5">
+<h2><span class="header-section-number">7.5</span> Coding step by step<a href="replicating-the-head-command.html#coding-step-by-step" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><p>Create a new python script called <code>04-head.py</code> and add what we introduced in Ch 6. Parsing text files</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="replicating-the-head-command.html#cb30-1" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
+<span id="cb30-2"><a href="replicating-the-head-command.html#cb30-2" tabindex="-1"></a></span>
+<span id="cb30-3"><a href="replicating-the-head-command.html#cb30-3" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb30-4"><a href="replicating-the-head-command.html#cb30-4" tabindex="-1"></a></span>
+<span id="cb30-5"><a href="replicating-the-head-command.html#cb30-5" tabindex="-1"></a>my_file <span class="op">=</span> <span class="bu">open</span>( sys.argv[<span class="dv">1</span>] )</span>
+<span id="cb30-6"><a href="replicating-the-head-command.html#cb30-6" tabindex="-1"></a></span>
+<span id="cb30-7"><a href="replicating-the-head-command.html#cb30-7" tabindex="-1"></a><span class="cf">for</span> my_line <span class="kw">in</span> my_file:</span>
+<span id="cb30-8"><a href="replicating-the-head-command.html#cb30-8" tabindex="-1"></a>    my_line <span class="op">=</span> my_line.rstrip(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb30-9"><a href="replicating-the-head-command.html#cb30-9" tabindex="-1"></a>    <span class="bu">print</span>( my_line )</span>
+<span id="cb30-10"><a href="replicating-the-head-command.html#cb30-10" tabindex="-1"></a></span>
+<span id="cb30-11"><a href="replicating-the-head-command.html#cb30-11" tabindex="-1"></a>my_file.close()</span></code></pre></div></li>
+<li><p>Now add code after the <code>open()</code> to set a maximum number of lines to print or defaulting to 10 if not specified</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="replicating-the-head-command.html#cb31-1" tabindex="-1"></a>max_lines <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb31-2"><a href="replicating-the-head-command.html#cb31-2" tabindex="-1"></a><span class="cf">if</span> <span class="bu">len</span>(sys.argv) <span class="op">&gt;</span> <span class="dv">2</span>:</span>
+<span id="cb31-3"><a href="replicating-the-head-command.html#cb31-3" tabindex="-1"></a>    max_lines <span class="op">=</span> <span class="bu">int</span>(sys.argv[<span class="dv">2</span>])</span></code></pre></div></li>
+<li><p>Finally, add the <code>for</code> loop to limit the number of lines printed</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="replicating-the-head-command.html#cb32-1" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb32-2"><a href="replicating-the-head-command.html#cb32-2" tabindex="-1"></a><span class="cf">for</span> my_line <span class="kw">in</span> my_file:</span>
+<span id="cb32-3"><a href="replicating-the-head-command.html#cb32-3" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">&gt;=</span> max_lines:</span>
+<span id="cb32-4"><a href="replicating-the-head-command.html#cb32-4" tabindex="-1"></a>        <span class="cf">break</span></span>
+<span id="cb32-5"><a href="replicating-the-head-command.html#cb32-5" tabindex="-1"></a>    my_line <span class="op">=</span> my_line.rstrip(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb32-6"><a href="replicating-the-head-command.html#cb32-6" tabindex="-1"></a>    <span class="bu">print</span>( my_line )</span>
+<span id="cb32-7"><a href="replicating-the-head-command.html#cb32-7" tabindex="-1"></a>    i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span></span></code></pre></div></li>
+<li><p>The complete script should look like this:</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="replicating-the-head-command.html#cb33-1" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
+<span id="cb33-2"><a href="replicating-the-head-command.html#cb33-2" tabindex="-1"></a></span>
+<span id="cb33-3"><a href="replicating-the-head-command.html#cb33-3" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb33-4"><a href="replicating-the-head-command.html#cb33-4" tabindex="-1"></a></span>
+<span id="cb33-5"><a href="replicating-the-head-command.html#cb33-5" tabindex="-1"></a>my_file <span class="op">=</span> <span class="bu">open</span>( sys.argv[<span class="dv">1</span>] )</span>
+<span id="cb33-6"><a href="replicating-the-head-command.html#cb33-6" tabindex="-1"></a></span>
+<span id="cb33-7"><a href="replicating-the-head-command.html#cb33-7" tabindex="-1"></a>max_lines <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb33-8"><a href="replicating-the-head-command.html#cb33-8" tabindex="-1"></a><span class="cf">if</span> <span class="bu">len</span>(sys.argv) <span class="op">&gt;</span> <span class="dv">2</span>:</span>
+<span id="cb33-9"><a href="replicating-the-head-command.html#cb33-9" tabindex="-1"></a>    max_lines <span class="op">=</span> <span class="bu">int</span>(sys.argv[<span class="dv">2</span>])</span>
+<span id="cb33-10"><a href="replicating-the-head-command.html#cb33-10" tabindex="-1"></a></span>
+<span id="cb33-11"><a href="replicating-the-head-command.html#cb33-11" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb33-12"><a href="replicating-the-head-command.html#cb33-12" tabindex="-1"></a><span class="cf">for</span> my_line <span class="kw">in</span> my_file:</span>
+<span id="cb33-13"><a href="replicating-the-head-command.html#cb33-13" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">&gt;=</span> max_lines:</span>
+<span id="cb33-14"><a href="replicating-the-head-command.html#cb33-14" tabindex="-1"></a>        <span class="cf">break</span></span>
+<span id="cb33-15"><a href="replicating-the-head-command.html#cb33-15" tabindex="-1"></a>    my_line <span class="op">=</span> my_line.rstrip(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb33-16"><a href="replicating-the-head-command.html#cb33-16" tabindex="-1"></a>    <span class="bu">print</span>( my_line )</span>
+<span id="cb33-17"><a href="replicating-the-head-command.html#cb33-17" tabindex="-1"></a>    i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb33-18"><a href="replicating-the-head-command.html#cb33-18" tabindex="-1"></a></span>
+<span id="cb33-19"><a href="replicating-the-head-command.html#cb33-19" tabindex="-1"></a>my_file.close()</span></code></pre></div></li>
+<li><p>Save the file and make it executable</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb34-1"><a href="replicating-the-head-command.html#cb34-1" tabindex="-1"></a><span class="fu">chmod</span> +x 04-head.py</span></code></pre></div></li>
+<li><p>Run the script with the file name and number of lines as arguments</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb35-1"><a href="replicating-the-head-command.html#cb35-1" tabindex="-1"></a><span class="ex">./04-head.py</span> sample2.txt 5</span></code></pre></div>
+<p>This will print the first 5 lines of <code>sample2.txt</code></p>
+<pre><code>apple
+banana
+cherry
+date
+elderberry</code></pre></li>
+</ul>
+</div>
+<div id="summary-4" class="section level2 hasAnchor" number="7.6">
+<h2><span class="header-section-number">7.6</span> Summary<a href="replicating-the-head-command.html#summary-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Congratulations! You have just:</p>
+<ul>
+<li><p>Created a Python script that replicates the <code>head</code> command</p></li>
+<li><p>Used command line arguments to specify the file and number of lines to print</p></li>
+</ul>
+</div>
+</div>
+
+
+
 <hr>
 <center> 
   <div class="footer">
@@ -263,8 +409,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="about-the-authors.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="parsing-files-line-by-line.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="knowledge-check.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

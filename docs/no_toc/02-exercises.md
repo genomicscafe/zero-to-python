@@ -36,24 +36,22 @@ Voila!  You should now see the Jupyter interface.
 <img src="02-exercises_files/figure-html//1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo_g3710e1bbefd_0_64.png" width="100%" />
 
 
+# (PART\*) EXERCISES {-}
+
 # Running Programs
-
-:::{.notice}
-
-Following is based on the “SciServer Essentials 2.0” image described in Ch 2. Setup Compute
-
-:::
 
 ## Learning objectives
 
-- Run a UNIX command
+- Run UNIX commands
 
-- Wrap a command in a Bash script
+- Wrap UNIX commands in a Bash script
 
 - Make a Bash script executable
 
+- Run a Bash script
 
-## Run a UNIX command
+
+## Run UNIX commands
 
 - Start a terminal
 
@@ -75,10 +73,27 @@ Following is based on the “SciServer Essentials 2.0” image described in Ch 2
 
 - Write your first Bash script
 
+    - Add the following and save the file as `00-hello.sh`
+
 <img src="02-exercises_files/figure-html//1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo_g36ef0094ecf_0_40.png" width="100%" />
 
 
-- Run `00-hello.sh`
+## Run a Bash script
+
+Now go back to the terminal:
+
+- Change to the `workspace` directory where you saved the file using the `cd` command
+
+```bash
+cd workspace/
+```
+
+- Make the script executable using the `chmod` command. This command changes the file permissions to allow execution (`+x`) of the script as a program
+
+```bash
+chmod +x 00-hello.sh
+```
+- Run the script by typing `./00-hello.sh` in the terminal:
 
 <img src="02-exercises_files/figure-html//1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo_g36ef0094ecf_0_45.png" width="100%" />
 
@@ -97,13 +112,6 @@ Congratulations! You have just:
 - Understand how to run Python scripts from the command line
 
 ## Python "Hello, World!" example
-
-- Follow the steps from the ***SciServer*** lesson
-    
-    - Login to SciServer and start a new jupyter notebook
-
-    - Start a new terminal session
-    
 
 - Create a new file named `01-helloworld.py` using the text editor and write the following code:
 
@@ -271,7 +279,7 @@ Congratulations! You have just:
 
 - Learn how to iterate through lines in a file using a `for` loop
 
-## Create a Test File
+## Create a Text File
 
 - Let's create a simple text file called `sample.txt` using the Jupyter text editor
 
@@ -285,7 +293,7 @@ Congratulations! You have just:
 
     ```
 
-## File Streams in Python
+## Open A File Stream
 
 A file stream is like a pipeline that lets you read data from a file one piece at a time. The most common way to open a file is using the `open()` function.
 
@@ -321,7 +329,7 @@ A file stream is like a pipeline that lets you read data from a file one piece a
 
 As you can see, the `print()` function can't print the file content directly. This output just indicates the file `sample1.txt` is opened in read mode (`'r'`) with UTF-8 encoding.
 
-## `for` loops
+## Add a `for` loop
 
 To read the file and print each line, we can use a `for` loop. 
 
@@ -370,7 +378,7 @@ Congratulations! You have just:
 - Printed each line without extra spaces or newlines
 
 
-# Replicating the `head` command in Python
+# Replicating the `head` command
 
 ## Learning objectives
 
@@ -380,7 +388,7 @@ Congratulations! You have just:
 
 - Learn how to use a `for` loop to limit the number of lines printed
 
-## Create a new file
+## Create a longer file
 
 - Let's create a simple text file called `sample2.txt` using the Jupyter text editor
 
@@ -400,6 +408,12 @@ Congratulations! You have just:
     ```
 
 ## Practice the `head` command
+
+:::{.notice}
+
+This exercise should be done in the Jupyter terminal.
+
+:::
 
 The `head` command in Bash prints the first few lines of a file. By default, it shows the first 10 lines, but you can specify a different number with the `-n` option.
 
@@ -438,11 +452,69 @@ The `head` command in Bash prints the first few lines of a file. By default, it 
         elderberry
         ```
 
-## Replicate the `head` command in Python
+## Designing the  `head` algorithm
 
-Now let's create a Python script that replicates the `head` command.
+We can replicate the `head` command by adding some logic to the `for` loop we introduced in Ch 6. Parsing text files.
 
-- Create a new Python script called `04-head.py`
+Starting with a `for` loop is great for iterating through items in a collection, like lines in a file. We can add a counter variable and a conditional `if` statement to limit how many lines we print.
+
+```python
+i = 0
+for my_line in my_file:
+    if i >= max_lines:
+        break
+    my_line = my_line.rstrip("\n")
+    print( my_line )
+    i = i + 1  
+```
+
+Key points:
+
+- We can use a counter variable `i` to keep track of how many lines we've printed. `i = i + 1` increments the counter by 1 each time we print a line.
+
+- The `if` statement checks if the number of lines printed exceeds the maximum specified by the user
+
+- The `max_lines` variable is set to 10 by default, but can be changed by providing a second command line argument
+
+
+## Coding step by step
+
+
+- Create a new python script called `04-head.py` and add what we introduced in Ch 6. Parsing text files
+
+    ```python
+    #!/usr/bin/env python3
+
+    import sys
+
+    my_file = open( sys.argv[1] )
+
+    for my_line in my_file:
+        my_line = my_line.rstrip("\n")
+        print( my_line )
+
+    my_file.close()
+    ```
+- Now add code after the `open()` to set a maximum number of lines to print or defaulting to 10 if not specified
+
+    ```python
+    max_lines = 10
+    if len(sys.argv) > 2:
+        max_lines = int(sys.argv[2])
+    ```
+
+- Finally, add the `for` loop to limit the number of lines printed
+
+    ````python
+    i = 0
+    for my_line in my_file:
+        if i >= max_lines:
+            break
+        my_line = my_line.rstrip("\n")
+        print( my_line )
+        i = i + 1
+    ````
+- The complete script should look like this:
 
     ```python
     #!/usr/bin/env python3
@@ -455,7 +527,6 @@ Now let's create a Python script that replicates the `head` command.
     if len(sys.argv) > 2:
         max_lines = int(sys.argv[2])
 
-    # be careful of off-by-1 errors
     i = 0
     for my_line in my_file:
         if i >= max_lines:
@@ -466,15 +537,6 @@ Now let's create a Python script that replicates the `head` command.
 
     my_file.close()
     ```
-
-    - The script takes two command line arguments: 
-        - the file name `sys.argv[1]`
-        
-        - The number of lines to print `sys.argv[2]`
-        
-        `If` the second argument is not provided, it defaults to 10.
-        
-        - The `If` statement is used to check if the number of lines exceeds the maximum specified.
 
 - Save the file and make it executable
 
@@ -506,6 +568,8 @@ Congratulations! You have just:
 
 - Used command line arguments to specify the file and number of lines to print
 
-# grep.py
+# (PART\*) WRAP-UP {-}
 
-# cut.py
+# Knowledge Check
+
+# Next Steps
