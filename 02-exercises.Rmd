@@ -437,7 +437,7 @@ Congratulations! You have just:
 
 :::{.notice}
 
-This exercise shpuld be don in the Jupyter terminal.
+This exercise should be done in the Jupyter terminal.
 
 :::
 
@@ -482,7 +482,7 @@ The `head` command in Bash prints the first few lines of a file. By default, it 
 
 We can replicate the `head` command by adding some logic to the `for` loop we introduced in Ch 6. Parsing text files.
 
-Starting with a `for` loop is great for iterating through items in a collection, like lines in a file. We can add a counter variable and a conditionsl `if` statement to limit how many lines we print.
+Starting with a `for` loop is great for iterating through items in a collection, like lines in a file. We can add a counter variable and a conditional `if` statement to limit how many lines we print.
 
 ```python
 i = 0
