@@ -20,8 +20,8 @@ devtools::session_info()
 <!-- Author information -->
 
 [FirstName LastName]: link to personal website
-[Javier Carpinteyro-Ponce]: https://johnmuschelli.com/
-[Frederick Tan]: https://www.cansavvy.com/
+[Javier Carpinteyro-Ponce]:
+[Frederick Tan]: 
 
 <!-- Links -->
 
