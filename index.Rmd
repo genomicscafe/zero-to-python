@@ -24,7 +24,7 @@ This course serves as first introduction to Python by introducing how to write s
 By the end of the exercises you should have the tools you need to follow and full fledged Python tutorial.
 
 ```{r, echo=FALSE, fig.alt=''}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo/edit#slide=id.g3710e1bbefd_0_16")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo/edit?slide=id.g373c4cce2e0_0_1#slide=id.g373c4cce2e0_0_1")
 ```
 
 ### Learning Goals {-}
