@@ -4,8 +4,7 @@ repo: https://github.com/ottrproject/OTTR_Template/
 rmd_files: ["index.Rmd",
             "01-intro.Rmd",
             "02-exercises.Rmd",
-            "About.Rmd",
-            "References.Rmd"]
+            "About.Rmd"]
 new_session: yes
 delete_merged_file: true
 language:
