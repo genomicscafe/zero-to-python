@@ -13,14 +13,20 @@ output:
       toc: true
 ---
 
+
+
+
 # About this Course {-}
 
+This course serves as first introduction to Python by introducing how to write scripts using a text editor and running the, at the UNIX command line.
+By the end of the exercises you should have the tools you need to follow and full fledged Python tutorial.
 
-## Available course formats
+<img src="index_files/figure-html//1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo_g373c4cce2e0_0_1.png" width="100%" />
 
-This course is available in multiple formats which allows you to take it in the way that best suites your needs. You can take it for certificate which can be for free or fee.
+### Learning Goals {-}
 
-- The material for this course can be viewed without login requirement on this [Bookdown website](LINK HERE). This format might be most appropriate for you if you rely on screen-reader technology.
-- This course can be taken for [free certification through Leanpub](LINK HERE).
-- This course can be taken on [Coursera for certification here](LINK HERE) (but it is not available for free on Coursera).
-- Our courses are open source, you can find the [source material for this course on GitHub](LINK HERE).
+- Practice a writing script, running it, updating script, running it, creating new script.
+
+- Parse text files line by line.
+
+- Appreciate how Unix commands are just files/programs/scripts.

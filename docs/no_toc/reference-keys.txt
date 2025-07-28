@@ -1,8 +1,4 @@
-available-course-formats
 introduction
-motivation
-target-audience
-curriculum
 set-up-compute
 join-sciserver
 start-jupyter
@@ -39,4 +35,3 @@ coding-step-by-step
 summary-4
 knowledge-check
 next-steps
-references

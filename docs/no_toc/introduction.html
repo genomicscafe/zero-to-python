@@ -142,14 +142,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this Course</a>
 <ul>
-<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#available-course-formats"><i class="fa fa-check"></i><b>0.1</b> Available course formats</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#learning-goals"><i class="fa fa-check"></i>Learning Goals</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
-<ul>
-<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#motivation"><i class="fa fa-check"></i><b>1.1</b> Motivation</a></li>
-<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#target-audience"><i class="fa fa-check"></i><b>1.2</b> Target Audience</a></li>
-<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#curriculum"><i class="fa fa-check"></i><b>1.3</b> Curriculum</a></li>
-</ul></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="set-up-compute.html"><a href="set-up-compute.html"><i class="fa fa-check"></i><b>2</b> Set Up Compute</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="set-up-compute.html"><a href="set-up-compute.html#join-sciserver"><i class="fa fa-check"></i><b>2.1</b> Join SciServer</a></li>
@@ -201,7 +196,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8" data-path="knowledge-check.html"><a href="knowledge-check.html"><i class="fa fa-check"></i><b>8</b> Knowledge Check</a></li>
 <li class="chapter" data-level="9" data-path="next-steps.html"><a href="next-steps.html"><i class="fa fa-check"></i><b>9</b> Next Steps</a></li>
 <li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
-<li class="chapter" data-level="10" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>10</b> References</a></li>
 <li class="divider"></li>
 <p style="text-align:center;"> <a href="https://www.ottrproject.org/" target="blank" > This content was published with</a> <a href="https://bookdown.org/" target="blank"> bookdown using</a> </p>
 <p style="text-align:center;"> <a href="https://github.com/ottrproject/OTTR_Template"> The OTTR Template by:</a></p>
@@ -239,16 +233,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="introduction" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Introduction<a href="introduction.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="motivation" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Motivation<a href="introduction.html#motivation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-</div>
-<div id="target-audience" class="section level2 hasAnchor" number="1.2">
-<h2><span class="header-section-number">1.2</span> Target Audience<a href="introduction.html#target-audience" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The course is intended for …</p>
-</div>
-<div id="curriculum" class="section level2 hasAnchor" number="1.3">
-<h2><span class="header-section-number">1.3</span> Curriculum<a href="introduction.html#curriculum" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The course covers…</p>
+<p>Why Python?</p>
+<ul>
+<li><p>Popular introductory language in Computer Science departments</p></li>
+<li><p>Great general purpose language (vs more specialized languages like R)</p></li>
+</ul>
+<p>What you will learn</p>
+<ul>
+<li><p>Practical skills for writing a Python script and running it at the UNIX command line</p></li>
+<li><p>Taste of how Python works and how it can be used to parse through text files line by line</p></li>
+<li><p>Understand that UNIX commands can, and often are, Python scripts</p></li>
+</ul>
+<p>What you won’t learn</p>
+<ul>
+<li>We are not really explaining Python, for that follow a full fledged Python tutorial (see Ch 9. Next Steps)</li>
+</ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="introduction.html#cb1-1" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div>
 <pre><code>## ─ Session info ───────────────────────────────────────────────────────────────
 ##  setting  value
@@ -260,7 +259,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ##  collate  en_US.UTF-8
 ##  ctype    en_US.UTF-8
 ##  tz       Etc/UTC
-##  date     2025-07-25
+##  date     2025-07-28
 ##  pandoc   3.1.1 @ /usr/local/bin/ (via rmarkdown)
 ## 
 ## ─ Packages ───────────────────────────────────────────────────────────────────
@@ -341,7 +340,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 
 ## ──────────────────────────────────────────────────────────────────────────────</code></pre>
 
-</div>
 </div>
 <hr>
 <center> 

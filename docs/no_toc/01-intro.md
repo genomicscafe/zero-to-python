@@ -1,17 +1,24 @@
 
 # Introduction
 
+Why Python?
 
-## Motivation
+- Popular introductory language in Computer Science departments
 
+- Great general purpose language (vs more specialized languages like R)
 
-## Target Audience  
+What you will learn
 
-The course is intended for ...
+- Practical skills for writing a Python script and running it at the UNIX command line
 
-## Curriculum  
+- Taste of how Python works and how it can be used to parse through text files line by line
 
-The course covers...
+- Understand that UNIX commands can, and often are, Python scripts
+
+What you won't learn
+
+- We are not really explaining Python, for that follow a full fledged Python tutorial (see Ch 9. Next Steps)
+
 
 
 
@@ -30,7 +37,7 @@ devtools::session_info()
 ##  collate  en_US.UTF-8
 ##  ctype    en_US.UTF-8
 ##  tz       Etc/UTC
-##  date     2025-07-25
+##  date     2025-07-28
 ##  pandoc   3.1.1 @ /usr/local/bin/ (via rmarkdown)
 ## 
 ## ─ Packages ───────────────────────────────────────────────────────────────────
