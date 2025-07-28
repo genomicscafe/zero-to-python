@@ -20,7 +20,7 @@ knitr::opts_chunk$set(out.width = "100%")
 
 # About this Course {-}
 
-This course serves as first introduction to Python by introducing how to write scripts using a text editor and runnning the, at the UNIX command line.
+This course serves as first introduction to Python by introducing how to write scripts using a text editor and running the, at the UNIX command line.
 By the end of the exercises you should have the tools you need to follow and full fledged Python tutorial.
 
 ```{r, echo=FALSE, fig.alt=''}
@@ -29,7 +29,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1Covg_bpPYGKnTVbO
 
 ### Learning Goals {-}
 
-- Practice a writting script, running it, updating script, running it, creating new script.
+- Practice a writing script, running it, updating script, running it, creating new script.
 
 - Parse text files line by line.
 

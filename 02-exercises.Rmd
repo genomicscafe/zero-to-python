@@ -613,7 +613,7 @@ Coming soon!
 
 # Next Steps
 
-Congratulations! You've sucessfully completed all the exercises and practiced creating multiple Python scripts and running them at tge UNIX command line.
+Congratulations! You've successfully completed all the exercises and practiced creating multiple Python scripts and running them at the UNIX command line.
 In addition to these practical skills, you got a taste of how Python works, and how it can be used to parse through text files line by line.
 We hope this helps demystify ever so slightly how UNIX commands can, and often are, Python scripts. As a reminder, here's what we covered in each chapter:
 
@@ -633,7 +633,7 @@ You should now have all the tools you need to follow a full fledged Python tutor
 
 - [Programming with Python](https://swcarpentry.github.io/python-novice-inflammation/)
 
-As you continue your journey with Python, try replicating these two additionall UNIX commands that are commonly used to filter and subset text files:
+As you continue your journey with Python, try replicating these two additional UNIX commands that are commonly used to filter and subset text files:
 
 - `grep.py` - Print only lines that match a given string (hint: `if pattern in line:`)
 
