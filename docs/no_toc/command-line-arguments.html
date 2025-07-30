@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<a href="http://jhudatascience.org/"><img src="https://ottrproject.org/images/dasl.png" style=" width: 80%; padding-left: 40px; padding-top: 8px; vertical-align: top "</a>
+<a href="https://github.com/genomicscafe" target="_blank"><img src="assets/genomics-cafe-logo.png" style="width: 70%; padding-left: 10px;"</a>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this Course</a>
@@ -253,9 +253,9 @@ print(sys.argv)
 ```</code></pre>
 <ul>
 <li><p>Save the file and make it executable:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="command-line-arguments.html#cb10-1" tabindex="-1"></a><span class="fu">chmod</span> +x 02-arguments.py</span></code></pre></div></li>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="command-line-arguments.html#cb8-1" tabindex="-1"></a><span class="fu">chmod</span> +x 02-arguments.py</span></code></pre></div></li>
 <li><p>Now run it directly with some arguments:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="command-line-arguments.html#cb11-1" tabindex="-1"></a><span class="ex">./02-arguments.py</span> hello world 123</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="command-line-arguments.html#cb9-1" tabindex="-1"></a><span class="ex">./02-arguments.py</span> hello world 123</span></code></pre></div>
 <p>You’ll see output like <code>['./02-arguments.py', 'hello', 'world', '123']</code></p></li>
 </ul>
 <p>The <code>sys</code> module provide access to the system-specific parameter. The variable <code>sys.argv</code> contains all command line arguments passed to your script, including the script name itself as the first element.</p>
@@ -268,16 +268,16 @@ print(sys.argv)
 <h2><span class="header-section-number">5.4</span> Accessing Specific Arguments<a href="command-line-arguments.html#accessing-specific-arguments" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li><p>Lets modify our script to print just the second command line argument:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="command-line-arguments.html#cb12-1" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
-<span id="cb12-2"><a href="command-line-arguments.html#cb12-2" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="command-line-arguments.html#cb12-3" tabindex="-1"></a><span class="im">import</span> sys</span>
-<span id="cb12-4"><a href="command-line-arguments.html#cb12-4" tabindex="-1"></a></span>
-<span id="cb12-5"><a href="command-line-arguments.html#cb12-5" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Script name:&quot;</span>, sys.argv[<span class="dv">0</span>])</span>
-<span id="cb12-6"><a href="command-line-arguments.html#cb12-6" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;First argument:&quot;</span>, sys.argv[<span class="dv">1</span>])</span></code></pre></div></li>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="command-line-arguments.html#cb10-1" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
+<span id="cb10-2"><a href="command-line-arguments.html#cb10-2" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="command-line-arguments.html#cb10-3" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb10-4"><a href="command-line-arguments.html#cb10-4" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="command-line-arguments.html#cb10-5" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Script name:&quot;</span>, sys.argv[<span class="dv">0</span>])</span>
+<span id="cb10-6"><a href="command-line-arguments.html#cb10-6" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;First argument:&quot;</span>, sys.argv[<span class="dv">1</span>])</span></code></pre></div></li>
 <li><p>Run it with: <code>./02-arguments.py hello</code></p>
 <p>This prints:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="command-line-arguments.html#cb13-1" tabindex="-1"></a><span class="ex">Script</span> name: ./02-arguments.py</span>
-<span id="cb13-2"><a href="command-line-arguments.html#cb13-2" tabindex="-1"></a><span class="ex">First</span> argument: hello</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="command-line-arguments.html#cb11-1" tabindex="-1"></a><span class="ex">Script</span> name: ./02-arguments.py</span>
+<span id="cb11-2"><a href="command-line-arguments.html#cb11-2" tabindex="-1"></a><span class="ex">First</span> argument: hello</span></code></pre></div>
 <p>Notice how <code>sys.argv[0]</code> is always the script name, so the first actual argument is at index 1</p>
 <p><strong><em>Warning</em></strong>: If you don’t provide enough arguments, Python will crash with an “IndexError”. We’ll learn to handle this with <code>if</code> statements later</p></li>
 </ul>
@@ -287,22 +287,22 @@ print(sys.argv)
 <p>Command line arguments are always strings, even if they look like numbers.</p>
 <ul>
 <li><p>Update <code>02-arguments.py</code></p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="command-line-arguments.html#cb14-1" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
-<span id="cb14-2"><a href="command-line-arguments.html#cb14-2" tabindex="-1"></a></span>
-<span id="cb14-3"><a href="command-line-arguments.html#cb14-3" tabindex="-1"></a><span class="im">import</span> sys</span>
-<span id="cb14-4"><a href="command-line-arguments.html#cb14-4" tabindex="-1"></a></span>
-<span id="cb14-5"><a href="command-line-arguments.html#cb14-5" tabindex="-1"></a><span class="co"># This won&#39;t work as expected</span></span>
-<span id="cb14-6"><a href="command-line-arguments.html#cb14-6" tabindex="-1"></a>result <span class="op">=</span> sys.argv[<span class="dv">1</span>] <span class="op">+</span> sys.argv[<span class="dv">2</span>]</span>
-<span id="cb14-7"><a href="command-line-arguments.html#cb14-7" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Without conversion:&quot;</span>, result)</span>
-<span id="cb14-8"><a href="command-line-arguments.html#cb14-8" tabindex="-1"></a></span>
-<span id="cb14-9"><a href="command-line-arguments.html#cb14-9" tabindex="-1"></a><span class="co"># Convert strings to integers first</span></span>
-<span id="cb14-10"><a href="command-line-arguments.html#cb14-10" tabindex="-1"></a>num1 <span class="op">=</span> <span class="bu">int</span>(sys.argv[<span class="dv">1</span>])</span>
-<span id="cb14-11"><a href="command-line-arguments.html#cb14-11" tabindex="-1"></a>num2 <span class="op">=</span> <span class="bu">int</span>(sys.argv[<span class="dv">2</span>])</span>
-<span id="cb14-12"><a href="command-line-arguments.html#cb14-12" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;With conversion:&quot;</span>, num1 <span class="op">+</span> num2)</span></code></pre></div></li>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="command-line-arguments.html#cb12-1" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
+<span id="cb12-2"><a href="command-line-arguments.html#cb12-2" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="command-line-arguments.html#cb12-3" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb12-4"><a href="command-line-arguments.html#cb12-4" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="command-line-arguments.html#cb12-5" tabindex="-1"></a><span class="co"># This won&#39;t work as expected</span></span>
+<span id="cb12-6"><a href="command-line-arguments.html#cb12-6" tabindex="-1"></a>result <span class="op">=</span> sys.argv[<span class="dv">1</span>] <span class="op">+</span> sys.argv[<span class="dv">2</span>]</span>
+<span id="cb12-7"><a href="command-line-arguments.html#cb12-7" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Without conversion:&quot;</span>, result)</span>
+<span id="cb12-8"><a href="command-line-arguments.html#cb12-8" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="command-line-arguments.html#cb12-9" tabindex="-1"></a><span class="co"># Convert strings to integers first</span></span>
+<span id="cb12-10"><a href="command-line-arguments.html#cb12-10" tabindex="-1"></a>num1 <span class="op">=</span> <span class="bu">int</span>(sys.argv[<span class="dv">1</span>])</span>
+<span id="cb12-11"><a href="command-line-arguments.html#cb12-11" tabindex="-1"></a>num2 <span class="op">=</span> <span class="bu">int</span>(sys.argv[<span class="dv">2</span>])</span>
+<span id="cb12-12"><a href="command-line-arguments.html#cb12-12" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;With conversion:&quot;</span>, num1 <span class="op">+</span> num2)</span></code></pre></div></li>
 <li><p>Run it with: <code>./02-arguments.py 5 3</code></p>
 <p>Output:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="command-line-arguments.html#cb15-1" tabindex="-1"></a><span class="ex">Without</span> conversion: 53</span>
-<span id="cb15-2"><a href="command-line-arguments.html#cb15-2" tabindex="-1"></a><span class="ex">With</span> conversion: 8</span></code></pre></div></li>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="command-line-arguments.html#cb13-1" tabindex="-1"></a><span class="ex">Without</span> conversion: 53</span>
+<span id="cb13-2"><a href="command-line-arguments.html#cb13-2" tabindex="-1"></a><span class="ex">With</span> conversion: 8</span></code></pre></div></li>
 </ul>
 <p>Without conversion, Python concatenates the strings “5” and “3” into “53”. The <code>int()</code> function converts string representations of numbers into actual integers that can be used in mathematical operations.</p>
 </div>

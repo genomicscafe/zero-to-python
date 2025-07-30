@@ -18,15 +18,13 @@ output:
 
 # About this Course {-}
 
-This course serves as first introduction to Python by introducing how to write scripts using a text editor and running the, at the UNIX command line.
+This course serves as first introduction to Python by introducing how to write scripts using a text editor and running them at the UNIX command line.
 By the end of the exercises you should have the tools you need to follow and full fledged Python tutorial.
 
 <img src="index_files/figure-html//1Covg_bpPYGKnTVbOjX_FkGgWHBG6VwdEySKbpZNwqKo_g373c4cce2e0_0_1.png" width="100%" />
 
 ### Learning Goals {-}
 
-- Practice a writing script, running it, updating script, running it, creating new script.
-
-- Parse text files line by line.
-
-- Appreciate how Unix commands are just files/programs/scripts.
+- Practice a writing script, running it, updating script, running it, creating new script
+- Parse text files line by line
+- Appreciate how Unix commands are just files/programs/scripts
