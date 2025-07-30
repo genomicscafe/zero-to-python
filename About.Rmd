@@ -10,6 +10,8 @@ These credits are based on our [course contributors table guidelines](https://ww
 |-------|-----|
 |Lead Content Instructor(s)|Javier Carpinteyro-Ponce, Frederick Tan|
 
+|Acknowledgements| Rajiv McCoy, Mike Sauria, and countless TAs|
+|Dedication|[James Taylor](https://jxtxfoundation.org)|
 
 &nbsp;
 
