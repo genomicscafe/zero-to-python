@@ -1,13 +1,8 @@
 
 # Introduction
 
-Why Python?
-
-- Popular introductory language in Computer Science departments
-
-- Great general purpose language (vs more specialized languages like R)
-
-What you will learn
+Why Python? Python is a common introductory language in computer science departments due to its relative ease of learning, versatility for many applications, and overall populatiry.
+It is great general purpose language and complements more specialized languages like R. In this course we won't do a deep dive into Python (for that follow a full fledged Python tutorial like the one described in Ch 9. Next Steps) but rather we'll cover:
 
 - Practical skills for writing a Python script and running it at the UNIX command line
 
@@ -15,12 +10,4 @@ What you will learn
 
 - Understand that UNIX commands can, and often are, Python scripts
 
-What you won't learn
 
-- We are not really explaining Python, for that follow a full fledged Python tutorial (see Ch 9. Next Steps)
-
-
-
-```{r}
-devtools::session_info()
-```
