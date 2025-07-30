@@ -20,7 +20,7 @@ knitr::opts_chunk$set(out.width = "100%")
 
 # About this Course {-}
 
-This course serves as first introduction to Python by introducing how to write scripts using a text editor and running the, at the UNIX command line.
+This course serves as first introduction to Python by introducing how to write scripts using a text editor and running them at the UNIX command line.
 By the end of the exercises you should have the tools you need to follow and full fledged Python tutorial.
 
 ```{r, echo=FALSE, fig.alt=''}
