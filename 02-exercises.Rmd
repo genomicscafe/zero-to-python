@@ -602,14 +602,6 @@ Congratulations! You have just:
 Coming soon!
 :::
 
-- Short answer
-
-- Explain code
-
-- Debug code
-
-- Write code
-
 
 # Next Steps
 
@@ -618,15 +610,10 @@ In addition to these practical skills, you got a taste of how Python works, and 
 We hope this helps demystify ever so slightly how UNIX commands can, and often are, Python scripts. As a reminder, here's what we covered in each chapter:
 
 - Set up Compute: Join SciServer, start Jupyter
-
 - Running Programs: Run UNIX commands, wrap UNIX commands in a Bash script, run a Bash script
-
 - Hello, World!: Python "Hello, World!" example and run a Python script
-
 - Command line arguments: Print all command line arguments, understanding lists, accessing specific arguments, and arguments are strings
-
 - Parsing files line by line: Create a text file, open a file stream, add a `for` loop
-
 - Replicating the `head` command: Practice the `head` command, designing the `head` algorithm, coding step by step
 
 You should now have all the tools you need to follow a full fledged Python tutorial. Here is one recommendation from Software Carpentry:
@@ -636,5 +623,4 @@ You should now have all the tools you need to follow a full fledged Python tutor
 As you continue your journey with Python, try replicating these two additional UNIX commands that are commonly used to filter and subset text files:
 
 - `grep.py` - Print only lines that match a given string (hint: `if pattern in line:`)
-
 - `cut.py` - For tab delimited files, print a specific column (hint: `fields = line.split()`)

@@ -13,15 +13,8 @@ These credits are based on our [course contributors table guidelines](https://ww
 
 &nbsp;
 
-```{r, echo = FALSE}
-devtools::session_info()
-```
-
 <!-- Author information -->
 
-[FirstName LastName]: link to personal website
-[Javier Carpinteyro-Ponce]:
-[Frederick Tan]: 
 
 <!-- Links -->
 
