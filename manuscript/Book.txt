@@ -1,0 +1,11 @@
+1-Introduction.md
+2-Set-Up-Compute.md
+3-Running-Programs.md
+4-Hello,-World.md
+5-Command-line-arguments.md
+6-Parsing-files-line-by-line.md
+7-Replicating-the-head-command.md
+8-Knowledge-Check.md
+9-Next-Steps.md
+About-this-Course.md
+About-the-Authors.md
